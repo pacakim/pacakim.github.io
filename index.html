@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>paca kim</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      background: #faf9f7;
+      color: #1a1a1a;
+      font-size: 14px;
+    }
+
+    /* ─── NAV ─── */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.6rem 2.8rem;
+      border-bottom: 0.5px solid rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      background: #faf9f7;
+      z-index: 100;
+    }
+    .logo {
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: 0.07em;
+    }
+    .nav-links {
+      display: flex;
+      gap: 2.2rem;
+      list-style: none;
+    }
+    .nav-links a {
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #888;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: #1a1a1a; }
+
+    /* ─── HERO ─── */
+    .hero {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      padding: 5rem 2.8rem 4rem;
+      border-bottom: 0.5px solid rgba(0,0,0,0.1);
+      gap: 2rem;
+    }
+    .hero-text h1 {
+      font-size: 26px;
+      font-weight: 500;
+      line-height: 1.55;
+      margin-bottom: 1rem;
+      letter-spacing: -0.01em;
+    }
+    .hero-text p {
+      font-size: 13px;
+      color: #666;
+      line-height: 1.9;
+      max-width: 320px;
+    }
+    .hero-anim {
+      width: 160px;
+      height: 160px;
+      flex-shrink: 0;
+      position: relative;
+      overflow: hidden;
+    }
+    /* 히어로 움직이는 도형 — 나중에 이미지 파일로 교체 가능 */
+    .anim-circle {
+      width: 80px; height: 80px;
+      border-radius: 50%;
+      background: #e8e3ed;
+      position: absolute;
+      left: 10px; top: 30px;
+      animation: float1 4s ease-in-out infinite;
+    }
+    .anim-circle2 {
+      width: 50px; height: 50px;
+      border-radius: 50%;
+      background: #e3e8e6;
+      position: absolute;
+      right: 10px; bottom: 20px;
+      animation: float2 3.5s ease-in-out infinite;
+    }
+    .anim-rect {
+      width: 55px; height: 55px;
+      background: #ede9e3;
+      position: absolute;
+      right: 30px; top: 20px;
+      animation: spin 12s linear infinite;
+    }
+    @keyframes float1 { 0%,100%{transform:translateY(0);} 50%{transform:translateY(-18px);} }
+    @keyframes float2 { 0%,100%{transform:translateY(0);} 50%{transform:translateY(12px);} }
+    @keyframes spin   { from{transform:rotate(0deg);} to{transform:rotate(360deg);} }
+
+    /* ─── MARQUEE ─── */
+    .marquee-wrap {
+      border-bottom: 0.5px solid rgba(0,0,0,0.1);
+      overflow: hidden;
+      padding: 1rem 0;
+      white-space: nowrap;
+    }
+    .marquee-inner {
+      display: inline-block;
+      animation: marquee 20s linear infinite;
+    }
+    .marquee-inner span {
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #aaa;
+      margin: 0 2.5rem;
+    }
+    @keyframes marquee { from{transform:translateX(0);} to{transform:translateX(-50%);} }
+
+    /* ─── SECTIONS ─── */
+    .section-block {
+      padding: 4rem 2.8rem;
+      border-bottom: 0.5px solid rgba(0,0,0,0.1);
+    }
+    .sec-label {
+      font-size: 10px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #aaa;
+      margin-bottom: 2.5rem;
+    }
+
+    /* ─── GRID ─── */
+    .grid2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4px;
+    }
+    .grid-item {
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+      aspect-ratio: 3/4;
+      background: #eee;
+    }
+    .grid-item:hover .ph-img { transform: scale(1.04); }
+    .ph-img {
+      width: 100%; height: 100%;
+      transition: transform 0.5s ease;
+      /* 실제 이미지 사용 시: background-image: url('images/작업명.jpg'); background-size: cover; background-position: center; */
+    }
+    .grid-item:hover .ov { opacity: 1; }
+    .ov {
+      position: absolute; inset: 0;
+      background: rgba(0,0,0,0.42);
+      display: flex; flex-direction: column; justify-content: flex-end;
+      padding: 16px;
+      opacity: 0;
+      transition: opacity 0.25s;
+    }
+    .ov-title { font-size: 13px; font-weight: 500; color: #fff; line-height: 1.4; }
+    .ov-meta  { font-size: 10px; color: rgba(255,255,255,0.55); margin-top: 3px; letter-spacing: 0.03em; }
+
+    /* placeholder 색상 */
+    .ph-1{background:#ede9e3;} .ph-2{background:#e3e8e6;} .ph-3{background:#e8e3ed;}
+    .ph-4{background:#e3e6e8;} .ph-5{background:#ede8e3;} .ph-6{background:#e6ede3;}
+    .ph-7{background:#e8e6e3;} .ph-8{background:#e3ede8;} .ph-9{background:#ede3e8;}
+    .ph-10{background:#e6e3ed;} .ph-11{background:#e3ede3;} .ph-12{background:#ede6e3;}
+
+    /* ─── ANIM BANNER ─── */
+    .anim-banner {
+      height: 220px;
+      overflow: hidden;
+      background: #f0ede8;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+    .orb {
+      border-radius: 50%;
+      position: absolute;
+    }
+    /* 배너 오브 — 나중에 이미지 파일로 교체 가능 */
+    .orb1{width:120px;height:120px;background:#e8e3ed;animation:orbmove1 6s ease-in-out infinite;}
+    .orb2{width:80px;height:80px;background:#e3e8e6;animation:orbmove2 5s ease-in-out infinite;}
+    .orb3{width:60px;height:60px;background:#ede9e3;animation:orbmove3 7s ease-in-out infinite;}
+    .orb4{width:40px;height:40px;background:#e6ede3;animation:orbmove4 4.5s ease-in-out infinite;}
+    @keyframes orbmove1{0%,100%{transform:translate(-60px,0);}50%{transform:translate(60px,20px);}}
+    @keyframes orbmove2{0%,100%{transform:translate(80px,10px);}50%{transform:translate(-40px,-20px);}}
+    @keyframes orbmove3{0%,100%{transform:translate(0,30px);}50%{transform:translate(50px,-30px);}}
+    @keyframes orbmove4{0%,100%{transform:translate(-80px,-20px);}50%{transform:translate(40px,20px);}}
+    .anim-banner-text {
+      font-size: 11px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #999;
+      z-index: 1;
+    }
+
+    /* ─── ABOUT ─── */
+    .about-row {
+      display: flex;
+      gap: 3rem;
+      align-items: flex-start;
+    }
+    .about-text { flex: 1; }
+    .about-text p { font-size: 14px; line-height: 1.9; color: #555; }
+    .about-text p+p { margin-top: 1em; }
+    .about-links { margin-top: 1.8rem; display: flex; flex-direction: column; gap: 0.5rem; }
+    .about-links a {
+      font-size: 12px; color: #999;
+      letter-spacing: 0.04em;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .about-links a:hover { color: #1a1a1a; }
+    /* about 애니메이션 — 나중에 이미지 파일로 교체 가능 */
+    .about-anim {
+      width: 140px; height: 180px;
+      flex-shrink: 0;
+      position: relative;
+      overflow: hidden;
+    }
+    .leaf {
+      position: absolute;
+      border-radius: 50% 50% 50% 0;
+      transform-origin: bottom left;
+    }
+    .leaf1{width:50px;height:70px;background:#e3e8e6;animation:sway1 4s ease-in-out infinite;left:20px;bottom:10px;}
+    .leaf2{width:40px;height:55px;background:#ede9e3;animation:sway2 3.5s ease-in-out infinite;left:50px;bottom:20px;}
+    .leaf3{width:30px;height:45px;background:#e8e3ed;animation:sway1 5s ease-in-out infinite 0.5s;left:70px;bottom:5px;}
+    @keyframes sway1{0%,100%{transform:rotate(-5deg);}50%{transform:rotate(8deg);}}
+    @keyframes sway2{0%,100%{transform:rotate(5deg);}50%{transform:rotate(-8deg);}}
+
+    /* ─── CONTACT ─── */
+    .contact-list { display: flex; flex-direction: column; gap: 1.2rem; }
+    .contact-item label {
+      font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase;
+      color: #aaa; display: block; margin-bottom: 3px;
+    }
+    .contact-item span { font-size: 13px; }
+
+    /* ─── FOOTER ─── */
+    footer {
+      padding: 2rem 2.8rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    footer p { font-size: 11px; color: #bbb; letter-spacing: 0.04em; }
+
+    /* ─── MODAL ─── */
+    .modal-bg {
+      display: none;
+      position: fixed; inset: 0;
+      background: rgba(0,0,0,0.72);
+      z-index: 200;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+    }
+    .modal-bg.open { display: flex; }
+    .modal {
+      background: #faf9f7;
+      max-width: 700px; width: 100%;
+      max-height: 90vh; overflow-y: auto;
+      padding: 2.5rem;
+      position: relative;
+    }
+    .modal-close {
+      position: absolute; top: 1.2rem; right: 1.5rem;
+      background: none; border: none; cursor: pointer;
+      font-size: 18px; color: #aaa;
+      transition: color 0.2s;
+    }
+    .modal-close:hover { color: #1a1a1a; }
+    .modal-cat  { font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: #aaa; margin-bottom: 0.4rem; }
+    .modal-title{ font-size: 20px; font-weight: 500; margin-bottom: 0.3rem; }
+    .modal-year { font-size: 12px; color: #aaa; margin-bottom: 1.8rem; }
+    .modal-img-main {
+      width: 100%; aspect-ratio: 4/3;
+      background: #eee;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 12px; color: #aaa;
+      margin-bottom: 3px;
+      /* 실제 이미지 시: background-image: url(...); background-size: cover; */
+    }
+    .modal-imgs {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 3px; margin-bottom: 2rem;
+    }
+    .modal-img-sm {
+      aspect-ratio: 1; background: #eee;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 11px; color: #aaa;
+    }
+    .modal-text {
+      font-size: 14px; line-height: 1.9; color: #555;
+      border-top: 0.5px solid rgba(0,0,0,0.1);
+      padding-top: 1.5rem;
+    }
+
+    /* ─── RESPONSIVE ─── */
+    @media (max-width: 600px) {
+      nav { padding: 1.2rem 1.5rem; }
+      .hero { padding: 3rem 1.5rem 2.5rem; flex-direction: column; }
+      .hero-anim { display: none; }
+      .section-block { padding: 3rem 1.5rem; }
+      .grid2 { grid-template-columns: 1fr 1fr; gap: 3px; }
+      .about-row { flex-direction: column; }
+      .about-anim { display: none; }
+      footer { padding: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="logo">paca kim</div>
+    <ul class="nav-links">
+      <li><a href="#archive">archive</a></li>
+      <li><a href="#about">about</a></li>
+      <li><a href="#contact">contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>일상의 순간들을<br>그림으로 기록합니다.</h1>
+      <p>전시, 출판, 커미션 등 다양한 형식으로 작업하고 있습니다.<br>서울을 기반으로 활동하는 일러스트레이터입니다.</p>
+    </div>
+    <div class="hero-anim">
+      <!-- 나중에 이 자리에 이미지 파일 넣기: <img src="images/hero.gif" alt=""> -->
+      <div class="anim-circle"></div>
+      <div class="anim-circle2"></div>
+      <div class="anim-rect"></div>
+    </div>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="marquee-wrap">
+    <div class="marquee-inner">
+      <span>illustration</span><span>exhibition</span><span>book &amp; zine</span><span>commission</span><span>archive</span><span>paca kim</span>
+      <span>illustration</span><span>exhibition</span><span>book &amp; zine</span><span>commission</span><span>archive</span><span>paca kim</span>
+    </div>
+  </div>
+
+  <!-- ARCHIVE -->
+  <section class="section-block" id="archive">
+    <div class="sec-label">archive</div>
+    <div class="grid2">
+
+      <!-- 작업 추가 방법:
+           1. 아래 블록을 복사
+           2. ph-숫자 클래스를 삭제하고 style="background-image:url('images/파일명.jpg');background-size:cover;background-position:center;" 추가
+           3. onclick 안의 텍스트 수정
+      -->
+
+      <div class="grid-item" onclick="openModal('귤로부터 전시','2024','exhibition','귤의 둥글고 따뜻한 형태에서 시작된 전시. 서울 콜링북스에서 2024년 가을, 원화 30여 점을 선보였다.')">
+        <div class="ph-img ph-1"></div>
+        <div class="ov"><div class="ov-title">귤로부터 전시</div><div class="ov-meta">exhibition · 2024</div></div>
+      </div>
+
+      <div class="grid-item" onclick="openModal('Tokyo Art Book Fair','2025','book &amp; zine','도쿄 아트북 페어 2025 참가 작업. 손으로 엮은 소형 진 3종을 제작하여 선보였다.')">
+        <div class="ph-img ph-2"></div>
+        <div class="ov"><div class="ov-title">Tokyo Art Book Fair</div><div class="ov-meta">book &amp; zine · 2025</div></div>
+      </div>
+
+      <div class="grid-item" onclick="openModal('이천미감 쌀 패키지','2026','commission','이천미감 브랜드의 쌀 패키지 일러스트레이션 작업. 한국의 논 풍경과 계절 변화를 담담하게 풀어냈다.')">
+        <div class="ph-img ph-3"></div>
+        <div class="ov"><div class="ov-title">이천미감 쌀 패키지</div><div class="ov-meta">commission · 2026</div></div>
+      </div>
+
+      <div class="grid-item" onclick="openModal('고마워서그래 원화','2026','illustration','감사라는 감정을 추상적이고 유기적인 형태로 표현한 원화 시리즈.')">
+        <div class="ph-img ph-4"></div>
+        <div class="ov"><div class="ov-title">고마워서그래 원화</div><div class="ov-meta">illustration · 2026</div></div>
+      </div>
+
+      <div class="grid-item" onclick="openModal('나태주 산문집 삽화','2024','commission','나태주 시인의 산문집 꽃이 사람이다 삽화 작업. 총 24점의 삽화를 수록했다.')">
+        <div class="ph-img ph-5"></div>
+        <div class="ov"><div class="ov-title">나태주 산문집 삽화</div><div class="ov-meta">commission · 2024</div></div>
+      </div>
+
+      <div class="grid-item" onclick="openModal('Piece by piece 전시','2023','exhibition','콜링북스 첫 개인전. 드로잉, 수채, 콜라주 등 다양한 매체의 작업 30여 점을 전시했다.')">
+        <div class="ph-img ph-6"></div>
+        <div class="ov"><div class="ov-title">Piece by piece</div><div class="ov-meta">exhibition · 2023</div></div>
+      </div>
+
+      <div class="grid-item" onclick="openModal('파르나스몰 라운지','2023','illustration','파르나스몰 라운지 공간 전체에 사용될 일러스트레이션 시리즈.')">
+        <div class="ph-img ph-7"></div>
+        <div class="ov"><div class="ov-title">파르나스몰 라운지</div><div class="ov-meta">illustration · 2023</div></div>
+      </div>
+
+      <div class="grid-item" onclick="openModal('아침에 그린 그림들','2023','book &amp; zine','매일 아침 15분씩 낙서하듯 그린 그림들을 모은 두 번째 노트.')">
+        <div class="ph-img ph-8"></div>
+        <div class="ov"><div class="ov-title">아침에 그린 그림들</div><div class="ov-meta">book &amp; zine · 2023</div></div>
+      </div>
+
+      <div class="grid-item" onclick="openModal('보건복지부 일러스트','2024','commission','보건복지부 캠페인 관련 일러스트레이션. 포스터, 온라인 배너 등 여러 매체에 활용되었다.')">
+        <div class="ph-img ph-9"></div>
+        <div class="ov"><div class="ov-title">보건복지부 일러스트</div><div class="ov-meta">commission · 2024</div></div>
+      </div>
+
+      <div class="grid-item" onclick="openModal('Sunday Fathers Club','2024','commission','Sunday Fathers Club 브랜드 리뉴얼 일러스트레이션 작업.')">
+        <div class="ph-img ph-10"></div>
+        <div class="ov"><div class="ov-title">Sunday Fathers Club</div><div class="ov-meta">commission · 2024</div></div>
+      </div>
+
+      <div class="grid-item" onclick="openModal('밑미 리추얼 드로잉','2023','illustration','밑미 리추얼 아침 드로잉 프로그램 일러스트레이션.')">
+        <div class="ph-img ph-11"></div>
+        <div class="ov"><div class="ov-title">밑미 리추얼 드로잉</div><div class="ov-meta">illustration · 2023</div></div>
+      </div>
+
+      <div class="grid-item" onclick="openModal('Moka Night','2023','exhibition','현대어린이책미술관 Moka Night 참가 작업.')">
+        <div class="ph-img ph-12"></div>
+        <div class="ov"><div class="ov-title">Moka Night</div><div class="ov-meta">exhibition · 2023</div></div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ANIM BANNER -->
+  <div class="anim-banner">
+    <!-- 나중에 이 자리에 이미지 파일 넣기: <img src="images/banner.gif" alt=""> -->
+    <div class="orb orb1"></div>
+    <div class="orb orb2"></div>
+    <div class="orb orb3"></div>
+    <div class="orb orb4"></div>
+    <span class="anim-banner-text">paca kim · illustrator · seoul</span>
+  </div>
+
+  <!-- ABOUT -->
+  <section class="section-block" id="about">
+    <div class="sec-label">about</div>
+    <div class="about-row">
+      <div class="about-text">
+        <p>일상의 순간들을 수채와 드로잉으로 기록합니다. 작고 사소한 것들이 쌓여 어떤 풍경이 되는 과정에 관심이 많습니다.</p>
+        <p>전시, 출판, 브랜드 커미션 등 다양한 형식으로 작업하고 있습니다. 글과 그림이 함께 놓일 때 생기는 여백을 좋아합니다.</p>
+        <div class="about-links">
+          <a href="https://www.instagram.com/kimpaca/" target="_blank">instagram @kimpaca</a>
+          <a href="mailto:super.kimpaca@gmail.com">super.kimpaca@gmail.com</a>
+        </div>
+      </div>
+      <div class="about-anim">
+        <!-- 나중에 이 자리에 이미지 파일 넣기: <img src="images/about.gif" alt=""> -->
+        <div class="leaf leaf1"></div>
+        <div class="leaf leaf2"></div>
+        <div class="leaf leaf3"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section-block" id="contact">
+    <div class="sec-label">contact</div>
+    <p style="font-size:14px;line-height:1.9;color:#555;margin-bottom:1.8rem;">작업 의뢰, 전시, 협업 등 모든 문의를 환영합니다.</p>
+    <div class="contact-list">
+      <div class="contact-item">
+        <label>email</label>
+        <span><a href="mailto:super.kimpaca@gmail.com" style="color:#1a1a1a;text-decoration:none;">super.kimpaca@gmail.com</a></span>
+      </div>
+      <div class="contact-item">
+        <label>instagram</label>
+        <span><a href="https://www.instagram.com/kimpaca/" target="_blank" style="color:#1a1a1a;text-decoration:none;">@kimpaca</a></span>
+      </div>
+      <div class="contact-item">
+        <label>location</label>
+        <span>seoul, korea</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 paca kim</p>
+    <p>seoul, korea</p>
+  </footer>
+
+  <!-- MODAL -->
+  <div class="modal-bg" id="modal" onclick="closeModalBg(event)">
+    <div class="modal">
+      <button class="modal-close" onclick="closeModal()">✕</button>
+      <div class="modal-cat" id="m-cat"></div>
+      <div class="modal-title" id="m-title"></div>
+      <div class="modal-year" id="m-year"></div>
+      <div class="modal-img-main">메인 이미지</div>
+      <div class="modal-imgs">
+        <div class="modal-img-sm">이미지 2</div>
+        <div class="modal-img-sm">이미지 3</div>
+      </div>
+      <div class="modal-text" id="m-text"></div>
+    </div>
+  </div>
+
+  <script>
+    function openModal(title, year, cat, text) {
+      document.getElementById('m-title').textContent = title;
+      document.getElementById('m-year').textContent  = year;
+      document.getElementById('m-cat').textContent   = cat;
+      document.getElementById('m-text').textContent  = text;
+      document.getElementById('modal').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeModal() {
+      document.getElementById('modal').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+    function closeModalBg(e) {
+      if (e.target === document.getElementById('modal')) closeModal();
+    }
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') closeModal();
+    });
+  </script>
+
+</body>
+</html>
