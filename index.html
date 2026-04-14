@@ -507,21 +507,10 @@
   </footer>
 
   <!-- MODAL -->
-  <div class="modal-bg" id="modal" onclick="closeModalBg(event)">
-    <div class="modal">
-      <button class="modal-close" onclick="closeModal()">✕</button>
-      <div class="modal-cat" id="m-cat"></div>
-      <div class="modal-title" id="m-title"></div>
-      <div class="modal-year" id="m-year"></div>
-      <div style="display:flex;flex-direction:column;gap:6px;margin-bottom:2rem;">
-  <div class="modal-img-slot" style="width:100%;aspect-ratio:4/3;background:#eee;"></div>
-  <div class="modal-img-slot" style="width:100%;aspect-ratio:4/3;background:#eee;"></div>
-  <div class="modal-img-slot" style="width:100%;aspect-ratio:4/3;background:#eee;"></div>
-  <div class="modal-img-slot" style="width:100%;aspect-ratio:4/3;background:#eee;"></div>
+ <div class="grid-item" onclick="location.href='gyul.html'">
+  <div class="ph-img" style="background-image:url('images/gyul-1.JPG');background-size:cover;background-position:center;"></div>
+  <div class="ov"><div class="ov-title">귤로부터 / Issu de la mandarine</div><div class="ov-meta">exhibition · 2024</div></div>
 </div>
-      <div class="modal-text" id="m-text"></div>
-    </div>
-  </div>
 
   <script>
     function openModal(title, year, cat, text, img1, img2, img3, img4) {
