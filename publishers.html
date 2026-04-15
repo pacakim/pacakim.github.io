@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seoul Publishers Table — paca kim</title>
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'League Spartan', 'Helvetica Neue', Arial, sans-serif;
+      background: #faf9f7;
+      color: #1a1a1a;
+    }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.6rem 2.8rem;
+      border-bottom: 0.5px solid rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      background: #faf9f7;
+      z-index: 100;
+    }
+    .logo img { height: 28px; }
+    .nav-links { display: flex; gap: 2.2rem; list-style: none; }
+    .nav-links a {
+      font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase;
+      color: #888; text-decoration: none; transition: color 0.2s;
+    }
+    .nav-links a:hover { color: #1a1a1a; }
+    .page-wrap {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 3rem 2.8rem 6rem;
+    }
+    .back {
+      display: inline-block;
+      font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase;
+      color: #aaa; text-decoration: none; margin-bottom: 2.5rem;
+      transition: color 0.2s;
+    }
+    .back:hover { color: #1a1a1a; }
+    .work-cat {
+      font-size: 10px; letter-spacing: 0.14em;
+      text-transform: uppercase; color: #aaa; margin-bottom: 0.5rem;
+    }
+    .work-title {
+      font-size: 24px; font-weight: 500;
+      line-height: 1.4; margin-bottom: 0.4rem;
+    }
+    .work-year { font-size: 12px; color: #aaa; margin-bottom: 3rem; }
+    .img-main {
+      width: 100%; height: auto;
+      display: block; margin-bottom: 4px;
+    }
+    .img-grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4px;
+      margin-bottom: 4px;
+    }
+    .img-grid-2 img {
+      width: 100%; height: auto; display: block;
+    }
+    .work-text {
+      display: flex;
+      gap: 4rem;
+      border-top: 0.5px solid rgba(0,0,0,0.1);
+      padding-top: 2rem;
+      margin-top: 3rem;
+    }
+    .work-text-ko {
+      flex: 1; font-size: 14px;
+      line-height: 1.95; color: #555;
+    }
+    .work-text-en {
+      flex: 1; font-size: 14px;
+      line-height: 1.95; color: #888;
+    }
+    .work-text-ko p + p { margin-top: 1em; }
+    .work-text-en p + p { margin-top: 1em; }
+    .book-item {
+      margin-top: 1em;
+      padding-left: 1rem;
+      border-left: 0.5px solid rgba(0,0,0,0.15);
+    }
+    .book-item .book-title {
+      font-weight: 500;
+      color: #444;
+    }
+    .book-item a {
+      color: #aaa;
+      text-decoration: none;
+      font-size: 12px;
+      transition: color 0.2s;
+    }
+    .book-item a:hover { color: #1a1a1a; }
+    .credit {
+      margin-top: 1rem;
+      font-size: 12px; color: #aaa; line-height: 1.9;
+    }
+    .credit a {
+      color: #aaa;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      transition: color 0.2s;
+    }
+    .credit a:hover { color: #1a1a1a; }
+    .work-nav {
+      margin-top: 3rem;
+      padding-top: 0;
+      border-top: none;
+    }
+    .work-nav a {
+      font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase;
+      color: #aaa; text-decoration: none; transition: color 0.2s;
+    }
+    .work-nav a:hover { color: #1a1a1a; }
+    footer {
+      padding: 2rem 2.8rem;
+      border-top: 0.5px solid rgba(0,0,0,0.1);
+      display: flex; justify-content: space-between;
+    }
+    footer p { font-size: 11px; color: #bbb; }
+    @media (max-width: 600px) {
+      nav { padding: 1.2rem 1.5rem; }
+      .page-wrap { padding: 2rem 1.5rem 4rem; }
+      .img-grid-2 { grid-template-columns: 1fr; }
+      .work-text { flex-direction: column; gap: 2rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="logo">
+      <a href="index.html"><img src="paca-logo.png" alt="paca kim"></a>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html#archive">archive</a></li>
+      <li><a href="index.html#about">about</a></li>
+      <li><a href="index.html#contact">contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="page-wrap">
+
+    <a href="index.html#archive" class="back">← archive</a>
+
+    <div class="work-cat">book fair</div>
+    <div class="work-title">퍼블리셔스테이블 / Seoul Publishers Table</div>
+    <div class="work-year">2023 · Seoul</div>
+
+    <img class="img-main" src="images/publishers-1.jpeg" alt="Seoul Publishers Table">
+    <img class="img-main" src="images/publishers-2.jpeg" alt="">
+    <img class="img-main" src="images/publishers-3.jpeg" alt="">
+
+    <div class="img-grid-2">
+      <img src="images/publishers-4.jpeg" alt="">
+      <img src="images/publishers-5.jpeg" alt="">
+    </div>
+    <div class="img-grid-2">
+      <img src="images/publishers-6.jpeg" alt="">
+      <img src="images/publishers-7.jpeg" alt="">
+    </div>
+    <div class="img-grid-2">
+      <img src="images/publishers-8.jpeg" alt="">
+      <img src="images/publishers-9.jpeg" alt="">
+    </div>
+    <div class="img-grid-2">
+      <img src="images/publishers-10.png" alt="">
+      <img src="images/publishers-11.png" alt="">
+    </div>
+    <div class="img-grid-2">
+      <img src="images/publishers-12.jpeg" alt="">
+      <img src="images/publishers-13.jpeg" alt="">
+    </div>
+    <div class="img-grid-2">
+      <img src="images/publishers-14.jpeg" alt="">
+      <img src="images/publishers-15.jpeg" alt="">
+    </div>
+    <div class="img-grid-2">
+      <img src="images/publishers-16.jpeg" alt="">
+      <img src="images/publishers-17.jpeg" alt="">
+    </div>
+    <div class="img-grid-2">
+      <img src="images/publishers-18.jpeg" alt="">
+      <img src="images/publishers-19.jpeg" alt="">
+    </div>
+    <div class="img-grid-2">
+      <img src="images/publishers-20.jpeg" alt="">
+      <img src="images/publishers-21.jpeg" alt="">
+    </div>
+    <div class="img-grid-2">
+      <img src="images/publishers-22.jpeg" alt="">
+      <img src="images/publishers-23.jpeg" alt="">
+    </div>
+    <div class="img-grid-2">
+      <img src="images/publishers-24.jpeg" alt="">
+      <img src="images/publishers-25.jpeg" alt="">
+    </div>
+    <div class="img-grid-2">
+      <img src="images/publishers-26.jpeg" alt="">
+      <img src="images/publishers-27.jpeg" alt="">
+    </div>
+    <div class="img-grid-2">
+      <img src="images/publishers-28.jpeg" alt="">
+      <img src="images/publishers-29.jpeg" alt="">
+    </div>
+
+    <div class="work-text">
+      <div class="work-text-ko">
+        <p>"각자 만들어보고 싶었던 책을 만들어보자"고 초안클럽 친구들과 다짐하고 정말로 책을 만들게 되었습니다. 6명의 이야기가 모여 6권의 책으로! 함께 북페어도 같이 나가기로 했습니다. 2023년 10월에 열렸던 서울 퍼블리셔스 테이블에 신청을 하게 되었고, 3일간 자리를 지켜 책을 소개하고 판매했어요. 직접 만든 책을 들고나가서 사람들에게 보여주고 반응을 살피는 일. 모두가 축제처럼 각자의 이야기를 즐겁게 펼친 3일이었어요.</p>
+
+        <div class="book-item">
+          <p><span class="book-title">김파카 『EARLY BIRD』</span> 아침 그림 모음집.<br>
+          얼리버드가 되고 싶은 마음으로 매일 아침 그림그리기로 하루를 시작한 7개월간의 기록<br>
+          <a href="https://www.instagram.com/kimpaca/" target="_blank">@kimpaca</a></p>
+        </div>
+
+        <div class="book-item">
+          <p><span class="book-title">루시 『우리집에 놀러올래?』</span> 성수동 신혼부부의 집, 동네, 가족, 취향 탐구생활.<br>
+          우리답게 살고 싶은 부부와 강아지 자두의 생활 에세이<br>
+          <a href="https://www.instagram.com/lucy_yoon/" target="_blank">@lucy_yoon</a></p>
+        </div>
+
+        <div class="book-item">
+          <p><span class="book-title">강수연 『시언이가 말했다』</span> 5세 시언이의 어록집.<br>
+          시언이의 말들과 엄마 강수연이 그린 그림으로 구성되어 있다.<br>
+          <a href="https://www.instagram.com/sooscape/" target="_blank">@sooscape</a></p>
+        </div>
+
+        <div class="book-item">
+          <p><span class="book-title">오호이 『팀장일기』</span> 알에서 깨어난 병아리 팀장의 회고록.<br>
+          팀장이라는 새로운 역할을 맡으며 배웠던 소프트 스킬을 1년 동안 손으로 기록해서 엮은 책.<br>
+          <a href="https://www.instagram.com/ochoee.studio/" target="_blank">@ochoee.studio</a></p>
+        </div>
+
+        <div class="book-item">
+          <p><span class="book-title">림고 『SWEET DREAMS』</span> 불면증을 물리치는 달콤한 추억, 문장, 음악과 수필집.<br>
+          불확실로 가득한 세계에서 포착한 확실한 기쁨과 행복을 소개한다.<br>
+          <a href="https://www.instagram.com/rim_ko/" target="_blank">@rim_ko</a></p>
+        </div>
+
+        <div class="book-item">
+          <p><span class="book-title">김키미 『로드나비』 『똥개집』 『하자』</span> 사진집.<br>
+          10년동안 길에서 만난 똥개와 고양이 사진, 하자있는 필름 카메라로 찍은 사진을 엮었다.<br>
+          <a href="https://www.instagram.com/kimmy.pro/" target="_blank">@kimmy.pro</a></p>
+        </div>
+
+        <p style="margin-top:1.5em; font-size:13px; color:#888;">서울 퍼블리셔스 테이블은 2013년 시작된 국내 최대 규모의 독립출판 페어입니다. 독립출판이라는 방식을 통해 나의 이야기를 세상에 꺼내고, 타인에게 펼쳐질 용기를 내본 모두의 축제이기도 합니다.</p>
+      </div>
+
+      <div class="work-text-en">
+        <p>We made a promise in our Choan Club — "let's each make the book we've always wanted to make" — and we actually did it. Six people, six stories, six books! We also decided to take them to a book fair together. We applied for the Seoul Publishers Table, held in October 2023, and spent three days presenting and selling our books. Bringing a book we made ourselves, showing it to people, and watching their reactions — it was three days where everyone joyfully shared their own story, like a festival.</p>
+
+        <div class="book-item">
+          <p><span class="book-title">Paca Kim 『EARLY BIRD』</span> A collection of morning drawings.<br>
+          A seven-month record of starting each day with a drawing, with the hope of becoming an early bird.<br>
+          <a href="https://www.instagram.com/kimpaca/" target="_blank">@kimpaca</a></p>
+        </div>
+
+        <div class="book-item">
+          <p><span class="book-title">Lucy 『Want to Come Over?』</span> Exploring the home, neighborhood, family, and tastes of a newlywed couple in Seongsu-dong.<br>
+          A life essay about a couple and their dog Jadu, living life their own way.<br>
+          <a href="https://www.instagram.com/lucy_yoon/" target="_blank">@lucy_yoon</a></p>
+        </div>
+
+        <div class="book-item">
+          <p><span class="book-title">Kang Suyeon 『Sieon Said』</span> A collection of quotes from five-year-old Sieon.<br>
+          Made up of Sieon's words and illustrations by her mother Kang Suyeon.<br>
+          <a href="https://www.instagram.com/sooscape/" target="_blank">@sooscape</a></p>
+        </div>
+
+        <div class="book-item">
+          <p><span class="book-title">Ohoi 『Team Lead Diary』</span> The memoir of a newly hatched team leader.<br>
+          A book of soft skills learned while taking on the new role of team lead, hand-recorded over one year.<br>
+          <a href="https://www.instagram.com/ochoee.studio/" target="_blank">@ochoee.studio</a></p>
+        </div>
+
+        <div class="book-item">
+          <p><span class="book-title">Rimgo 『SWEET DREAMS』</span> Sweet memories, sentences, music, and essays to fight insomnia.<br>
+          Introducing the certain joys and happiness found in an uncertain world.<br>
+          <a href="https://www.instagram.com/rim_ko/" target="_blank">@rim_ko</a></p>
+        </div>
+
+        <div class="book-item">
+          <p><span class="book-title">Kimmy 『Road Nabi』『Stray Dog House』『Defects』</span> Photo Books.<br>
+          Photographs of stray dogs and cats met on the streets over ten years, along with photos taken with a defective film camera.<br>
+          <a href="https://www.instagram.com/kimmy.pro/" target="_blank">@kimmy.pro</a></p>
+        </div>
+
+        <p style="margin-top:1.5em; font-size:13px; color:#aaa;">The Seoul Publishers Table is Korea's largest independent publishing fair, started in 2013. It is a festival for everyone who has found the courage to bring their own story into the world through independent publishing, and to share it with others.</p>
+      </div>
+    </div>
+
+    <div class="credit">
+      <a href="http://publisherstable.kr" target="_blank">Seoul Publishers Table @publishers.table →</a><br>
+      촬영 이준식 <a href="https://www.instagram.com/orangepolo/" target="_blank">@orangepolo</a>
+      · 강소라 <a href="https://www.instagram.com/sproksm/" target="_blank">@sproksm</a>
+    </div>
+
+    <div class="work-nav">
+      <a href="index.html#archive">← all works</a>
+    </div>
+
+  </div>
+
+  <footer>
+    <p>© 2026 paca kim</p>
+    <p>seoul, korea</p>
+  </footer>
+
+</body>
+</html>
