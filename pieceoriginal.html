@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Piece by piece Original painting — paca kim</title>
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'League Spartan', 'Helvetica Neue', Arial, sans-serif;
+      background: #faf9f7;
+      color: #1a1a1a;
+    }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.6rem 2.8rem;
+      border-bottom: 0.5px solid rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      background: #faf9f7;
+      z-index: 100;
+    }
+    .logo img { height: 28px; }
+    .nav-links { display: flex; gap: 2.2rem; list-style: none; }
+    .nav-links a {
+      font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase;
+      color: #888; text-decoration: none; transition: color 0.2s;
+    }
+    .nav-links a:hover { color: #1a1a1a; }
+    .page-wrap {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 3rem 2.8rem 6rem;
+    }
+    .back {
+      display: inline-block;
+      font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase;
+      color: #aaa; text-decoration: none; margin-bottom: 2.5rem;
+      transition: color 0.2s;
+    }
+    .back:hover { color: #1a1a1a; }
+    .work-cat {
+      font-size: 10px; letter-spacing: 0.14em;
+      text-transform: uppercase; color: #aaa; margin-bottom: 0.5rem;
+    }
+    .work-title {
+      font-size: 24px; font-weight: 500;
+      line-height: 1.4; margin-bottom: 0.4rem;
+    }
+    .work-year { font-size: 12px; color: #aaa; margin-bottom: 3rem; }
+
+    .painting-item {
+      margin-bottom: 4px;
+    }
+    .painting-item img {
+      width: 100%; height: auto;
+      display: block;
+    }
+    .painting-caption {
+      padding: 0.8rem 0 1.6rem;
+      border-bottom: 0.5px solid rgba(0,0,0,0.07);
+      margin-bottom: 4px;
+    }
+    .painting-caption .title {
+      font-size: 14px;
+      font-weight: 500;
+      color: #1a1a1a;
+      margin-bottom: 0.2rem;
+    }
+    .painting-caption .info {
+      font-size: 12px;
+      color: #aaa;
+      line-height: 1.7;
+    }
+    .painting-caption .status {
+      display: inline-block;
+      margin-top: 0.4rem;
+      font-size: 11px;
+      letter-spacing: 0.06em;
+      color: #bbb;
+    }
+    .painting-caption .status.sold {
+      color: #c0a898;
+    }
+    .painting-caption .status.kept {
+      color: #b0b8b0;
+    }
+
+    .work-text {
+      display: flex;
+      gap: 4rem;
+      border-top: 0.5px solid rgba(0,0,0,0.1);
+      padding-top: 2rem;
+      margin-top: 3rem;
+    }
+    .work-text-ko {
+      flex: 1; font-size: 14px;
+      line-height: 1.95; color: #555;
+    }
+    .work-text-en {
+      flex: 1; font-size: 14px;
+      line-height: 1.95; color: #888;
+    }
+    .work-text-ko p + p { margin-top: 1em; }
+    .work-text-en p + p { margin-top: 1em; }
+    .credit {
+      margin-top: 1rem;
+      font-size: 12px; color: #aaa; line-height: 1.9;
+    }
+    .credit a {
+      color: #aaa;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      transition: color 0.2s;
+    }
+    .credit a:hover { color: #1a1a1a; }
+    .work-nav {
+      margin-top: 3rem;
+      padding-top: 0;
+      border-top: none;
+    }
+    .work-nav a {
+      font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase;
+      color: #aaa; text-decoration: none; transition: color 0.2s;
+    }
+    .work-nav a:hover { color: #1a1a1a; }
+    footer {
+      padding: 2rem 2.8rem;
+      border-top: 0.5px solid rgba(0,0,0,0.1);
+      display: flex; justify-content: space-between;
+    }
+    footer p { font-size: 11px; color: #bbb; }
+    @media (max-width: 600px) {
+      nav { padding: 1.2rem 1.5rem; }
+      .page-wrap { padding: 2rem 1.5rem 4rem; }
+      .work-text { flex-direction: column; gap: 2rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="logo">
+      <a href="index.html"><img src="paca-logo.png" alt="paca kim"></a>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html#archive">archive</a></li>
+      <li><a href="index.html#about">about</a></li>
+      <li><a href="index.html#contact">contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="page-wrap">
+
+    <a href="index.html#archive" class="back">← archive</a>
+
+    <div class="work-cat">original painting</div>
+    <div class="work-title">〈Piece by piece〉 Original Painting</div>
+    <div class="work-year">2023 · Seoul</div>
+
+    <div class="painting-item">
+      <img src="images/pieceoriginal-1.jpg" alt="Piece of mind">
+      <div class="painting-caption">
+        <div class="title">〈Piece of mind〉</div>
+        <div class="info">김파카, 2023, 종이 위에 과슈 Gouache painting on paper, 12×17cm</div>
+        <span class="status sold">Sold out</span>
+      </div>
+    </div>
+
+    <div class="painting-item">
+      <img src="images/pieceoriginal-2.jpg" alt="Sweet morning">
+      <div class="painting-caption">
+        <div class="title">〈Sweet morning〉</div>
+        <div class="info">김파카, 2023, 종이 위에 과슈 Gouache painting on paper, 12×17cm</div>
+        <span class="status sold">Sold out</span>
+      </div>
+    </div>
+
+    <div class="painting-item">
+      <img src="images/pieceoriginal-3.jpg" alt="Music Box">
+      <div class="painting-caption">
+        <div class="title">〈Music Box〉</div>
+        <div class="info">김파카, 2023, 종이 위에 과슈 Gouache painting on paper, 16×16cm</div>
+        <span class="status sold">Sold out</span>
+      </div>
+    </div>
+
+    <div class="painting-item">
+      <img src="images/pieceoriginal-4.jpg" alt="Stripe Lovers">
+      <div class="painting-caption">
+        <div class="title">〈Stripe Lovers〉</div>
+        <div class="info">김파카, 2023, 종이 위에 과슈 Gouache painting on paper, 18×25cm</div>
+        <span class="status sold">Sold out</span>
+      </div>
+    </div>
+
+    <div class="painting-item">
+      <img src="images/pieceoriginal-5.jpg" alt="To Portland">
+      <div class="painting-caption">
+        <div class="title">〈To Portland〉</div>
+        <div class="info">김파카, 2023, 종이 위에 과슈 Gouache painting on paper, 18×16cm</div>
+        <span class="status sold">Sold out</span>
+      </div>
+    </div>
+
+    <div class="painting-item">
+      <img src="images/pieceoriginal-6.jpg" alt="From Book Lovers">
+      <div class="painting-caption">
+        <div class="title">〈From Book Lovers〉</div>
+        <div class="info">김파카, 2023, 종이 위에 과슈 Gouache painting on paper, 17×18cm</div>
+        <span class="status sold">Sold out</span>
+      </div>
+    </div>
+
+    <div class="painting-item">
+      <img src="images/pieceoriginal-7.jpg" alt="Night ride">
+      <div class="painting-caption">
+        <div class="title">〈Night ride〉</div>
+        <div class="info">김파카, 2023, 종이 위에 과슈 Gouache painting on paper, 12×17cm</div>
+        <span class="status kept">작가소장</span>
+      </div>
+    </div>
+
+    <div class="painting-item">
+      <img src="images/pieceoriginal-8.jpg" alt="Early morning cafe">
+      <div class="painting-caption">
+        <div class="title">〈Early morning cafe〉</div>
+        <div class="info">김파카, 2023, 종이 위에 과슈 Gouache painting on paper, 12×17cm</div>
+        <span class="status kept">작가소장</span>
+      </div>
+    </div>
+
+    <div class="painting-item">
+      <img src="images/pieceoriginal-9.jpg" alt="Carol Tree">
+      <div class="painting-caption">
+        <div class="title">〈Carol Tree〉</div>
+        <div class="info">김파카, 2023, 종이 위에 과슈 Gouache painting on paper, 13×18cm</div>
+        <span class="status sold">Sold out</span>
+      </div>
+    </div>
+
+    <div class="painting-item">
+      <img src="images/pieceoriginal-10.jpeg" alt="Piece of mind">
+      <div class="painting-caption">
+        <div class="title">〈Piece of mind〉</div>
+        <div class="info">김파카, 2023, 종이 위에 과슈 Gouache painting on paper, 12×17cm</div>
+        <span class="status kept">작가소장 · Not for sale</span>
+      </div>
+    </div>
+
+    <div class="work-text">
+      <div class="work-text-ko">
+        <p>〈Piece by piece〉 전시에 가져간 원화입니다. 첫 전시였기에 '과연 팔릴까?' 궁금했는데, 앞으로 더 많이 작업하라는 응원의 메시지인 듯 거의 모두 팔렸어요. 액자에 넣은 원화도, 작은 종이 그림에도, 모두 작품보증서를 만들어서 전달했습니다.</p>
+        <p>왜 이 그림을 골랐는지 물어봤을 때 다 이유가 달랐지만, 각자 자기가 좋아하는 이야기가 담겨있을 때 끌린다는 것도 알게 되었습니다. 제가 좋아하는 마음과 여러분이 좋아하는 마음이 연결되었을 때, 무언가 에너지가 생기는 것 같아요. 감사하는 마음으로 계속 작업하겠습니다.</p>
+      </div>
+      <div class="work-text-en">
+        <p>These are the original works I brought to the 〈Piece by piece〉 exhibition. Since it was my first show, I wondered — will any of them actually sell? But almost all of them found new homes, which felt like a message of encouragement to keep making more. I made a certificate of authenticity for every piece — for the framed originals and the small paper drawings alike.</p>
+        <p>When I asked people why they chose a particular piece, everyone had a different reason. But I came to understand that what draws someone in is finding their own story inside a work. When the things I love connect with the things you love, something like energy seems to come alive. I'll keep making work, with a grateful heart.</p>
+      </div>
+    </div>
+
+    <div class="credit">
+      작품 촬영 이동규 <a href="https://www.instagram.com/leedongkyu_/" target="_blank">@leedongkyu_</a>
+    </div>
+
+    <div class="work-nav">
+      <a href="index.html#archive">← all works</a>
+    </div>
+
+  </div>
+
+  <footer>
+    <p>© 2026 paca kim</p>
+    <p>seoul, korea</p>
+  </footer>
+
+</body>
+</html>
