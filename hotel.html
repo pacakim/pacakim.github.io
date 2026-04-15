@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>유럽호텔여행 오마주 — paca kim</title>
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'League Spartan', 'Helvetica Neue', Arial, sans-serif;
+      background: #faf9f7;
+      color: #1a1a1a;
+    }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.6rem 2.8rem;
+      border-bottom: 0.5px solid rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      background: #faf9f7;
+      z-index: 100;
+    }
+    .logo img { height: 28px; }
+    .nav-links { display: flex; gap: 2.2rem; list-style: none; }
+    .nav-links a {
+      font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase;
+      color: #888; text-decoration: none; transition: color 0.2s;
+    }
+    .nav-links a:hover { color: #1a1a1a; }
+    .page-wrap {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 3rem 2.8rem 6rem;
+    }
+    .back {
+      display: inline-block;
+      font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase;
+      color: #aaa; text-decoration: none; margin-bottom: 2.5rem;
+      transition: color 0.2s;
+    }
+    .back:hover { color: #1a1a1a; }
+    .work-cat {
+      font-size: 10px; letter-spacing: 0.14em;
+      text-transform: uppercase; color: #aaa; margin-bottom: 0.5rem;
+    }
+    .work-title {
+      font-size: 24px; font-weight: 500;
+      line-height: 1.4; margin-bottom: 0.4rem;
+    }
+    .work-year { font-size: 12px; color: #aaa; margin-bottom: 3rem; }
+    .img-main {
+      width: 100%; height: auto;
+      display: block; margin-bottom: 4px;
+    }
+    .work-text {
+      display: flex;
+      gap: 4rem;
+      border-top: 0.5px solid rgba(0,0,0,0.1);
+      padding-top: 2rem;
+      margin-top: 3rem;
+    }
+    .work-text-ko {
+      flex: 1; font-size: 14px;
+      line-height: 1.95; color: #555;
+    }
+    .work-text-en {
+      flex: 1; font-size: 14px;
+      line-height: 1.95; color: #888;
+    }
+    .work-nav {
+      margin-top: 3rem;
+      padding-top: 0;
+      border-top: none;
+    }
+    .work-nav a {
+      font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase;
+      color: #aaa; text-decoration: none; transition: color 0.2s;
+    }
+    .work-nav a:hover { color: #1a1a1a; }
+    footer {
+      padding: 2rem 2.8rem;
+      border-top: 0.5px solid rgba(0,0,0,0.1);
+      display: flex; justify-content: space-between;
+    }
+    footer p { font-size: 11px; color: #bbb; }
+    @media (max-width: 600px) {
+      nav { padding: 1.2rem 1.5rem; }
+      .page-wrap { padding: 2rem 1.5rem 4rem; }
+      .work-text { flex-direction: column; gap: 2rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="logo">
+      <a href="index.html"><img src="paca-logo.png" alt="paca kim"></a>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html#archive">archive</a></li>
+      <li><a href="index.html#about">about</a></li>
+      <li><a href="index.html#contact">contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="page-wrap">
+
+    <a href="index.html#archive" class="back">← archive</a>
+
+    <div class="work-cat">illustration</div>
+    <div class="work-title">『유럽호텔여행』 오마주 일러스트레이션<br>『Europe Hotel Traveling』 — Homage Illustration</div>
+    <div class="work-year">2024 · Seoul</div>
+
+    <img class="img-main" src="images/hotel-0.jpg" alt="유럽호텔여행 오마주 일러스트레이션">
+    <img class="img-main" src="images/hotel-1.jpg" alt="">
+    <img class="img-main" src="images/hotel-2.jpg" alt="">
+
+    <div class="work-text">
+      <div class="work-text-ko">
+        박선영 작가님의 책 〈유럽 호텔 여행〉 속 한 장면을 오마주한 작업입니다. 작업을 시작하기 전에 유럽의 호텔이 가진 고유한 정취와 작가님이 담아낸 감성을 어떻게 시각적으로 표현할지 고민했습니다. 특히, 공간의 아늑함과 여행의 순간에서 느껴지는 낭만을 살리기 위해 색감을 세심히 다루려고 했습니다.
+      </div>
+      <div class="work-text-en">
+        This is a work created as an homage to a scene from writer Park Sun-young's book <em>European Hotel Travel</em>. Before starting, I thought carefully about how to visually capture the unique atmosphere of European hotels and the sensibility the author brought to the page. I paid particular attention to color, wanting to preserve both the coziness of the spaces and the romance found in those fleeting travel moments.
+      </div>
+    </div>
+
+    <div class="work-nav">
+      <a href="index.html#archive">← all works</a>
+    </div>
+
+  </div>
+
+  <footer>
+    <p>© 2026 paca kim</p>
+    <p>seoul, korea</p>
+  </footer>
+
+</body>
+</html>
