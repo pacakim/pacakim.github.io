@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>당근을 싫어하는 토끼 달력 — paca kim</title>
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'League Spartan', 'Helvetica Neue', Arial, sans-serif;
+      background: #faf9f7;
+      color: #1a1a1a;
+    }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.6rem 2.8rem;
+      border-bottom: 0.5px solid rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      background: #faf9f7;
+      z-index: 100;
+    }
+    .logo img { height: 28px; }
+    .nav-links { display: flex; gap: 2.2rem; list-style: none; }
+    .nav-links a {
+      font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase;
+      color: #888; text-decoration: none; transition: color 0.2s;
+    }
+    .nav-links a:hover { color: #1a1a1a; }
+    .page-wrap {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 3rem 2.8rem 6rem;
+    }
+    .back {
+      display: inline-block;
+      font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase;
+      color: #aaa; text-decoration: none; margin-bottom: 2.5rem;
+      transition: color 0.2s;
+    }
+    .back:hover { color: #1a1a1a; }
+    .work-cat {
+      font-size: 10px; letter-spacing: 0.14em;
+      text-transform: uppercase; color: #aaa; margin-bottom: 0.5rem;
+    }
+    .work-title {
+      font-size: 24px; font-weight: 500;
+      line-height: 1.4; margin-bottom: 0.4rem;
+    }
+    .work-year { font-size: 12px; color: #aaa; margin-bottom: 3rem; }
+    .img-main {
+      width: 100%; height: auto;
+      display: block; margin-bottom: 4px;
+    }
+    .work-text {
+      border-top: 0.5px solid rgba(0,0,0,0.1);
+      padding-top: 2rem; margin-top: 3rem;
+      display: flex; gap: 4rem;
+    }
+    .work-text-ko {
+      flex: 1; font-size: 14px;
+      line-height: 1.95; color: #555;
+    }
+    .work-text-en {
+      flex: 1; font-size: 14px;
+      line-height: 1.95; color: #888;
+    }
+    .work-text-ko p + p { margin-top: 1em; }
+    .work-text-en p + p { margin-top: 1em; }
+    .work-nav {
+      display: flex; justify-content: space-between;
+      margin-top: 2rem; padding-top: 2rem;
+      border-top: 0.5px solid rgba(0,0,0,0.1);
+    }
+    .work-nav a {
+      font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase;
+      color: #aaa; text-decoration: none; transition: color 0.2s;
+    }
+    .work-nav a:hover { color: #1a1a1a; }
+    footer {
+      padding: 2rem 2.8rem;
+      border-top: 0.5px solid rgba(0,0,0,0.1);
+      display: flex; justify-content: space-between;
+    }
+    footer p { font-size: 11px; color: #bbb; }
+    @media (max-width: 600px) {
+      nav { padding: 1.2rem 1.5rem; }
+      .page-wrap { padding: 2rem 1.5rem 4rem; }
+      .work-text { flex-direction: column; gap: 2rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="logo">
+      <a href="index.html"><img src="paca-logo.png" alt="paca kim"></a>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html#archive">archive</a></li>
+      <li><a href="index.html#about">about</a></li>
+      <li><a href="index.html#contact">contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="page-wrap">
+
+    <a href="index.html#archive" class="back">← archive</a>
+
+    <div class="work-cat">calendar</div>
+    <div class="work-title">당근을 싫어하는 토끼 달력<br>'I don't eat Carrot' Calendar 2023</div>
+    <div class="work-year">2022 · Seoul</div>
+
+    <img class="img-main" src="images/carrot-1.jpeg" alt="당근을 싫어하는 토끼 달력">
+    <img class="img-main" src="images/carrot-2.jpeg" alt="">
+    <img class="img-main" src="images/carrot-3.jpeg" alt="">
+    <img class="img-main" src="images/carrot-4.jpeg" alt="">
+    <img class="img-main" src="images/carrot-5.jpeg" alt="">
+    <img class="img-main" src="images/carrot-6.jpeg" alt="">
+    <img class="img-main" src="images/carrot-7.jpeg" alt="">
+    <img class="img-main" src="images/carrot-8.jpeg" alt="">
+    <img class="img-main" src="images/carrot-9.jpeg" alt="">
+
+    <div class="work-text">
+      <div class="work-text-ko">
+        <p>2022년 11월 겨울, 당근을 싫어하는 토끼 달력을 만들었습니다.</p>
+        <p>사계절에 한번씩 총 4번 뭐가 될진 모르지만 '좋아서 하는' 프로젝트를 만들어 기부를 해보고 싶었어요.</p>
+        <p>재밌었습니다. 연말이라 만나는 사람마다 선물하기도 좋았고 그 핑계로 편지도 많이 썼어요. 해보고 싶었던 것들을 다 해봤습니다. 똑똑 뜯어서 쓰는 미싱선도 넣어보고, 아코디언처럼 길쭉하게 접히는 형태로 만들어보고, 우체국에서 직접우표도 만들었어요. 서촌의 베어카페에서 달력전시도 했고요.</p>
+        <p>달력은 200개 중에 127개를 판매했습니다. 62개는 구글폼으로 주문받아 판매했고, 베어카페에서 11개, b급으로 재단된 달력 54개는 조금 할인해서 물건의집 플리마켓에서도 팔고, 용인의 독립서점 '북살롱벗'에서도 연말 선물로 구매해주셨어요. 제 홈페이지에서도 팔았고요. 나머지는 연말에 만나는 사람들에게 선물로도 나눠주고 이제 남은 건 스무개정도 되는 것 같습니다.</p>
+        <p>봄이 되기전에 겨울 프로젝트로 진행한 당근토끼달력을 부랴부랴 정산했습니다. 제작비를 제외하고 남은 온전한 수익이 무려 106,332원! (네.. 0이 하나 빠진 것 같은 기분이 드는데 계산기를 세번 두들겨도 10만원이 맞습니다) 멋찐 언니들은 기부금액이 적으면 자기 돈을 더 얹어서 두 배, 세 배로 하던데..</p>
+        <p>하찮은 제 계획은 이렇습니다. 딱 떨어지는 10만원은 투명하게 후원한다고 소문난 &lt;바보의 나눔&gt;에 기부를 하고요. 나머지 6332원은 … 아이스크림 사먹을게요. 🙃</p>
+        <p>지난 겨울 당근달력을 구매해주신 여러분 모두모두 고맙습니다! 덕분에 재밌는 것도 큥짝쿵짝 만들어볼 수 있었고 하찮고 투명하게 기부도 했어요. 다 덕분입니다. 고맙습니다.</p>
+        <p>4월 달력은 당근 싹이 나오는 그림입니다. 머릿속에 심어놓은 생각들이 하나둘씩 뾱 하고 튀어오르는 봄을 맞이하게 되기를!</p>
+        <p>사랑을 가득담아,<br>2023.3.28.화요일</p>
+      </div>
+      <div class="work-text-en">
+        <p>In November 2022, I made a calendar featuring a rabbit who hates carrots.</p>
+        <p>I wanted to create a 'just for the love of it' project — once each season, four times a year — and donate the proceeds, whatever they turned out to be.</p>
+        <p>It was a lot of fun. Since it was the end of the year, it was perfect for gifting to everyone I met, and it gave me a good excuse to write lots of letters too. I tried everything I'd ever wanted to do: perforated tear-off lines, an accordion fold, and I even had custom stamps made at the post office. I also held a small calendar exhibition at Bear Cafe in Seochon.</p>
+        <p>Of the 200 calendars made, 127 were sold. 62 were sold through a Google Form, 11 at Bear Cafe, and 54 slightly imperfect ones were sold at a discount at the Mulgeon-ui-jip flea market. An independent bookstore in Yongin called 'Book Salon Beot' also purchased some as year-end gifts, and I sold some through my website too. The rest I gave away as gifts to people I saw over the holidays — I think there are about twenty left now.</p>
+        <p>Just before spring arrived, I finally tallied up the winter project. After production costs, the net profit came to a whopping 106,332 won! (Yes, it does feel like a zero is missing — but I've punched it into the calculator three times and it's definitely 100,000 won.) Cool people I admire will sometimes top up small donations to double or triple the amount with their own money…</p>
+        <p>My humble plan is this: the round 100,000 won goes to Babo-ui Nanoom, known for its transparent and trustworthy donations. And the remaining 6,332 won… I'm going to buy myself an ice cream. 🙃</p>
+        <p>Thank you so much to everyone who bought a carrot calendar last winter! Because of you, I got to make something silly and joyful, and I made a small, transparent little donation. It's all thanks to you. Thank you.</p>
+        <p>The April page features a drawing of carrot sprouts. Here's hoping that the ideas you've been quietly planting in your mind will start popping up one by one this spring!</p>
+        <p>With lots of love,<br>Tuesday, March 28, 2023</p>
+      </div>
+    </div>
+
+    <div class="work-nav">
+      <a href="index.html#archive">← all works</a>
+    </div>
+
+  </div>
+
+  <footer>
+    <p>© 2026 paca kim</p>
+    <p>seoul, korea</p>
+  </footer>
+
+</body>
+</html>
