@@ -56,9 +56,11 @@
       display: block; margin-bottom: 4px;
     }
     .work-text {
+      display: flex;
+      gap: 4rem;
       border-top: 0.5px solid rgba(0,0,0,0.1);
-      padding-top: 2rem; margin-top: 3rem;
-      display: flex; gap: 4rem;
+      padding-top: 2rem;
+      margin-top: 3rem;
     }
     .work-text-ko {
       flex: 1; font-size: 14px;
@@ -68,10 +70,21 @@
       flex: 1; font-size: 14px;
       line-height: 1.95; color: #888;
     }
+    .credit {
+      margin-top: 1rem;
+      font-size: 12px; color: #aaa; line-height: 1.9;
+    }
+    .credit a {
+      color: #aaa;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      transition: color 0.2s;
+    }
+    .credit a:hover { color: #1a1a1a; }
     .work-nav {
-      display: flex; justify-content: space-between;
-      margin-top: 2rem; padding-top: 2rem;
-      border-top: 0.5px solid rgba(0,0,0,0.1);
+      margin-top: 3rem;
+      padding-top: 0;
+      border-top: none;
     }
     .work-nav a {
       font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase;
@@ -121,7 +134,7 @@
     <img class="img-main" src="images/cartoon-7.jpg" alt="">
     <img class="img-main" src="images/cartoon-8.jpg" alt="">
 
-<div class="work-text">
+    <div class="work-text">
       <div class="work-text-ko">
         레디투킥 카툰 EPISODE 2. 〈수영모자 쓰는 법〉을 그렸습니다. 수영모자 착용법과 세탁 방법을 재밌게 그린 카툰이에요. 발이 작아 오리발을 낀다는 콤플렉스를 가진 레디투킥의 캐릭터, 킥킥이의 친구를 만들어 그렸습니다. 수영장에 가기 전 준비물을 잘 챙겼는지, 수영모자는 어떻게 쓰는지, 수영 후에 관리는 어떻게 하는지에 대한 내용을 담고 있습니다. 두툼한 두께의 연필로 쓱쓱 그려서 스캔받아 만들었고요. 삐뚤빼뚤한 라인으로 카툰 박스를 만들어서 완성했습니다.
       </div>
@@ -131,12 +144,14 @@
     </div>
 
     <div class="credit">
-      Brand : <a href="https://www.readytokick.com" target="_blank" style="color:#aaa; text-decoration:underline; text-underline-offset:3px;">READYTOKICK →</a>
+      Brand : <a href="https://www.readytokick.com" target="_blank">READYTOKICK →</a>
     </div>
 
-    <div class="work-nav" style="border-top:none; padding-top:0; margin-top:3rem;">
+    <div class="work-nav">
       <a href="index.html#archive">← all works</a>
     </div>
+
+  </div>
 
   <footer>
     <p>© 2026 paca kim</p>
