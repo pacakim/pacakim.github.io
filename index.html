@@ -185,6 +185,18 @@
     .ov-title { font-size: 13px; font-weight: 500; color: #fff; line-height: 1.4; }
     .ov-meta  { font-size: 10px; color: rgba(255,255,255,0.55); margin-top: 3px; letter-spacing: 0.03em; }
 
+    /* ─── GRID CAPTION ─── */
+    .grid-item-wrap { display: flex; flex-direction: column; }
+    .grid-caption { padding: 0.8rem 0 1.6rem; }
+    .cap-meta {
+      font-size: 11px; letter-spacing: 0.08em;
+      text-transform: uppercase; color: #aaa; margin-bottom: 0.4rem;
+    }
+    .cap-title {
+      font-size: 14px; font-weight: 500;
+      color: #1a1a1a; line-height: 1.5;
+    }
+
     /* placeholder 색상 */
     .ph-1{background:#ede9e3;} .ph-2{background:#e3e8e6;} .ph-3{background:#e8e3ed;}
     .ph-4{background:#e3e6e8;} .ph-5{background:#ede8e3;} .ph-6{background:#e6ede3;}
@@ -406,94 +418,202 @@
            3. onclick 안의 텍스트 수정
       -->
 
-<div class="grid-item" onclick="location.href='gyul.html'">
-  <div class="ph-img" style="background-image:url('images/gyul-1.JPG');background-size:cover;background-position:center;"></div>
-  <div class="ov"><div class="ov-title">귤로부터 / Issu de la mandarine</div><div class="ov-meta">exhibition · 2024</div></div>
+<div class="grid-item-wrap">
+  <div class="grid-item" onclick="location.href='gyul.html'">
+    <div class="ph-img" style="background-image:url('images/gyul-1.JPG');background-size:cover;background-position:center;"></div>
+    <div class="ov"><div class="ov-title">귤로부터 / Issu de la mandarine</div></div>
+  </div>
+  <div class="grid-caption">
+    <div class="cap-meta">exhibition · 2024</div>
+    <div class="cap-title">귤로부터 / Issu de la mandarine</div>
+  </div>
 </div>
 
-     <div class="grid-item" onclick="location.href='sunfather.html'">
-  <div class="ph-img" style="background-image:url('images/sunfather-1.jpg');background-size:cover;background-position:center;"></div>
-  <div class="ov"><div class="ov-title">Sunday Fathers Club Renewal</div><div class="ov-meta">logo illustration · 2024</div></div>
+<div class="grid-item-wrap">
+  <div class="grid-item" onclick="location.href='sunfather.html'">
+    <div class="ph-img" style="background-image:url('images/sunfather-1.jpg');background-size:cover;background-position:center;"></div>
+    <div class="ov"></div>
+  </div>
+  <div class="grid-caption">
+    <div class="cap-meta">logo illustration · 2024</div>
+    <div class="cap-title">Sunday Fathers Club Renewal</div>
+  </div>
 </div>
       
-<div class="grid-item" onclick="location.href='hotel.html'">
-  <div class="ph-img" style="background-image:url('images/hotel-0.jpg');background-size:cover;background-position:center;"></div>
-  <div class="ov"><div class="ov-title">『유럽호텔여행』 오마주</div><div class="ov-meta">illustration · 2024</div></div>
+<div class="grid-item-wrap">
+  <div class="grid-item" onclick="location.href='hotel.html'">
+    <div class="ph-img" style="background-image:url('images/hotel-0.jpg');background-size:cover;background-position:center;"></div>
+    <div class="ov"></div>
+  </div>
+  <div class="grid-caption">
+    <div class="cap-meta">illustration · 2024</div>
+    <div class="cap-title">『유럽호텔여행』 오마주 일러스트레이션</div>
+  </div>
 </div>
       
-<div class="grid-item" onclick="location.href='gov.html'">
-  <div class="ph-img" style="background-image:url('images/gov-1.jpg');background-size:cover;background-position:center;"></div>
-  <div class="ov"><div class="ov-title">보건복지부 정책 일러스트레이션</div><div class="ov-meta">illustration · 2024</div></div>
+<div class="grid-item-wrap">
+  <div class="grid-item" onclick="location.href='gov.html'">
+    <div class="ph-img" style="background-image:url('images/gov-1.jpg');background-size:cover;background-position:center;"></div>
+    <div class="ov"></div>
+  </div>
+  <div class="grid-caption">
+    <div class="cap-meta">illustration · 2024</div>
+    <div class="cap-title">보건복지부 정책 일러스트레이션</div>
+  </div>
 </div>
       
-<div class="grid-item" onclick="location.href='poet.html'">
-  <div class="ph-img" style="background-image:url('images/poet-1.png');background-size:cover;background-position:center;"></div>
-  <div class="ov"><div class="ov-title">『꽃이 사람이다』 삽화</div><div class="ov-meta">book illustration · 2024</div></div>
+<div class="grid-item-wrap">
+  <div class="grid-item" onclick="location.href='poet.html'">
+    <div class="ph-img" style="background-image:url('images/poet-1.png');background-size:cover;background-position:center;"></div>
+    <div class="ov"></div>
+  </div>
+  <div class="grid-caption">
+    <div class="cap-meta">book illustration · 2024</div>
+    <div class="cap-title">『꽃이 사람이다』 나태주 산문집 삽화</div>
+  </div>
 </div>
       
-<div class="grid-item" onclick="location.href='parnas.html'">
-  <div class="ph-img" style="background-image:url('images/parnas-2.jpg');background-size:cover;background-position:center;"></div>
-  <div class="ov"><div class="ov-title">파르나스몰 라운지 일러스트레이션</div><div class="ov-meta">space illustration · 2023</div></div>
+<div class="grid-item-wrap">
+  <div class="grid-item" onclick="location.href='parnas.html'">
+    <div class="ph-img" style="background-image:url('images/parnas-2.jpg');background-size:cover;background-position:center;"></div>
+    <div class="ov"></div>
+  </div>
+  <div class="grid-caption">
+    <div class="cap-meta">space illustration · 2023</div>
+    <div class="cap-title">파르나스몰 라운지 일러스트레이션</div>
+  </div>
 </div>
       
-<div class="grid-item" onclick="location.href='piece.html'">
-  <div class="ph-img" style="background-image:url('images/piece-1.jpg');background-size:cover;background-position:center;"></div>
-  <div class="ov"><div class="ov-title">Piece drawing</div><div class="ov-meta">original painting · 2023</div></div>
+<div class="grid-item-wrap">
+  <div class="grid-item" onclick="location.href='piece.html'">
+    <div class="ph-img" style="background-image:url('images/piece-1.jpg');background-size:cover;background-position:center;"></div>
+    <div class="ov"></div>
+  </div>
+  <div class="grid-caption">
+    <div class="cap-meta">original painting · 2023</div>
+    <div class="cap-title">Piece drawing</div>
+  </div>
 </div>
       
-<div class="grid-item" onclick="location.href='pieceoriginal.html'">
-  <div class="ph-img" style="background-image:url('images/pieceoriginal-1.jpg');background-size:cover;background-position:center;"></div>
-  <div class="ov"><div class="ov-title">〈Piece by piece〉 원화</div><div class="ov-meta">original painting · 2023</div></div>
+<div class="grid-item-wrap">
+  <div class="grid-item" onclick="location.href='pieceoriginal.html'">
+    <div class="ph-img" style="background-image:url('images/pieceoriginal-1.jpg');background-size:cover;background-position:center;"></div>
+    <div class="ov"></div>
+  </div>
+  <div class="grid-caption">
+    <div class="cap-meta">original painting · 2023</div>
+    <div class="cap-title">〈Piece by piece〉 원화</div>
+  </div>
 </div>
       
-     <div class="grid-item" onclick="location.href='pieceby.html'">
-  <div class="ph-img" style="background-image:url('images/pieceby-1.png');background-size:cover;background-position:center;"></div>
-  <div class="ov"><div class="ov-title">Piece by piece</div><div class="ov-meta">exhibition · 2023</div></div>
+<div class="grid-item-wrap">
+  <div class="grid-item" onclick="location.href='pieceby.html'">
+    <div class="ph-img" style="background-image:url('images/pieceby-1.png');background-size:cover;background-position:center;"></div>
+    <div class="ov"></div>
+  </div>
+  <div class="grid-caption">
+    <div class="cap-meta">exhibition · 2023</div>
+    <div class="cap-title">Piece by piece : CALLING BOOKS</div>
+  </div>
 </div>
 
-      <div class="grid-item" onclick="location.href='publishers.html'">
-  <div class="ph-img" style="background-image:url('images/publishers-9.jpeg');background-size:cover;background-position:center;"></div>
-  <div class="ov"><div class="ov-title">퍼블리셔스테이블</div><div class="ov-meta">book fair · 2023</div></div>
+<div class="grid-item-wrap">
+  <div class="grid-item" onclick="location.href='publishers.html'">
+    <div class="ph-img" style="background-image:url('images/publishers-9.jpeg');background-size:cover;background-position:center;"></div>
+    <div class="ov"></div>
+  </div>
+  <div class="grid-caption">
+    <div class="cap-meta">book fair · 2023</div>
+    <div class="cap-title">Seoul Publishers Table</div>
+  </div>
 </div>
 
-   <div class="grid-item" onclick="location.href='swimcap.html'" style="position:relative;">
-  <img src="images/swimcap-1.gif" style="width:100%;height:100%;object-fit:cover;display:block;">
-  <div class="ov"><div class="ov-title">레디투킥 수영모자 일러스트</div><div class="ov-meta">brand illustration · 2023</div></div>
+<div class="grid-item-wrap">
+  <div class="grid-item" onclick="location.href='swimcap.html'" style="position:relative;">
+    <img src="images/swimcap-1.gif" style="width:100%;height:100%;object-fit:cover;display:block;">
+    <div class="ov"></div>
+  </div>
+  <div class="grid-caption">
+    <div class="cap-meta">brand illustration · 2023</div>
+    <div class="cap-title">READYTOKICK SWIM CAP illustration</div>
+  </div>
 </div>
 
-     <div class="grid-item" onclick="location.href='cartoon.html'">
-  <div class="ph-img" style="background-image:url('images/cartoon-1.jpg');background-size:cover;background-position:center;"></div>
-  <div class="ov"><div class="ov-title">READY TO KICK Cartoon Ep.2</div><div class="ov-meta">cartoon illustration · 2023</div></div>
+<div class="grid-item-wrap">
+  <div class="grid-item" onclick="location.href='cartoon.html'">
+    <div class="ph-img" style="background-image:url('images/cartoon-1.jpg');background-size:cover;background-position:center;"></div>
+    <div class="ov"></div>
+  </div>
+  <div class="grid-caption">
+    <div class="cap-meta">cartoon illustration · 2023</div>
+    <div class="cap-title">READY TO KICK Cartoon Episode 2</div>
+  </div>
 </div>
 
-     <div class="grid-item" onclick="location.href='lifezip.html'">
-  <div class="ph-img" style="background-image:url('images/lifezip-1.jpg');background-size:cover;background-position:center;"></div>
-  <div class="ov"><div class="ov-title">라이프집 Do Not Disturb</div><div class="ov-meta">magazine interview · 2023</div></div>
+<div class="grid-item-wrap">
+  <div class="grid-item" onclick="location.href='lifezip.html'">
+    <div class="ph-img" style="background-image:url('images/lifezip-1.jpg');background-size:cover;background-position:center;"></div>
+    <div class="ov"></div>
+  </div>
+  <div class="grid-caption">
+    <div class="cap-meta">magazine interview · 2023</div>
+    <div class="cap-title">라이프집 Do Not Disturb</div>
+  </div>
 </div>
 
-      <div class="grid-item" onclick="location.href='carrot.html'">
-  <div class="ph-img" style="background-image:url('images/carrot-1.jpeg');background-size:cover;background-position:center;"></div>
-  <div class="ov"><div class="ov-title">당근을 싫어하는 토끼 달력</div><div class="ov-meta">calendar · 2022</div></div>
+<div class="grid-item-wrap">
+  <div class="grid-item" onclick="location.href='carrot.html'">
+    <div class="ph-img" style="background-image:url('images/carrot-1.jpeg');background-size:cover;background-position:center;"></div>
+    <div class="ov"></div>
+  </div>
+  <div class="grid-caption">
+    <div class="cap-meta">calendar · 2022</div>
+    <div class="cap-title">당근을 싫어하는 토끼 달력</div>
+  </div>
 </div>
 
-      <div class="grid-item" onclick="location.href='emoticon.html'">
-  <div class="ph-img" style="background-image:url('images/emoticon-9.gif');background-size:cover;background-position:center;"></div>
-  <div class="ov"><div class="ov-title">카카오 이모티콘 "김호랭이"</div><div class="ov-meta">emoticon · 2021</div></div>
+<div class="grid-item-wrap">
+  <div class="grid-item" onclick="location.href='emoticon.html'">
+    <div class="ph-img" style="background-image:url('images/emoticon-9.gif');background-size:cover;background-position:center;"></div>
+    <div class="ov"></div>
+  </div>
+  <div class="grid-caption">
+    <div class="cap-meta">emoticon · 2021</div>
+    <div class="cap-title">카카오 이모티콘 "김호랭이 오늘의 운세"</div>
+  </div>
 </div>
 
-   <div class="grid-item" onclick="location.href='sikmul.html'">
-  <div class="ph-img" style="background-image:url('images/sikmul-1.jpg');background-size:cover;background-position:center;"></div>
-  <div class="ov"><div class="ov-title">『식물 상담』 일러스트레이션</div><div class="ov-meta">book illustration · 2021</div></div>
+<div class="grid-item-wrap">
+  <div class="grid-item" onclick="location.href='sikmul.html'">
+    <div class="ph-img" style="background-image:url('images/sikmul-1.jpg');background-size:cover;background-position:center;"></div>
+    <div class="ov"></div>
+  </div>
+  <div class="grid-caption">
+    <div class="cap-meta">book illustration · 2021</div>
+    <div class="cap-title">『식물 상담』 일러스트레이션</div>
+  </div>
 </div>
 
+<div class="grid-item-wrap">
   <div class="grid-item" onclick="location.href='munbal.html'">
-  <div class="ph-img" style="background-image:url('images/munbal-1.png');background-size:cover;background-position:center;"></div>
-  <div class="ov"><div class="ov-title">문발포레스트</div><div class="ov-meta">book talk & drawing workshop · 2021</div></div>
+    <div class="ph-img" style="background-image:url('images/munbal-1.png');background-size:cover;background-position:center;"></div>
+    <div class="ov"></div>
+  </div>
+  <div class="grid-caption">
+    <div class="cap-meta">book talk & drawing workshop · 2021</div>
+    <div class="cap-title">문발포레스트 〈최선의 하루를 위한 식물루틴〉</div>
+  </div>
 </div>
 
-      <div class="grid-item" onclick="location.href='directory.html'">
-  <div class="ph-img" style="background-image:url('images/directory-1.jpg');background-size:cover;background-position:center;"></div>
-  <div class="ov"><div class="ov-title">디렉토리 매거진 인터뷰</div><div class="ov-meta">interview · 2021</div></div>
+<div class="grid-item-wrap">
+  <div class="grid-item" onclick="location.href='directory.html'">
+    <div class="ph-img" style="background-image:url('images/directory-1.jpg');background-size:cover;background-position:center;"></div>
+    <div class="ov"></div>
+  </div>
+  <div class="grid-caption">
+    <div class="cap-meta">interview · 2021</div>
+    <div class="cap-title">디렉토리 매거진 인터뷰</div>
+  </div>
 </div>
 
     </div>
