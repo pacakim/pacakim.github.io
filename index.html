@@ -117,25 +117,6 @@
     @keyframes float2 { 0%,100%{transform:translateY(0);} 50%{transform:translateY(12px);} }
     @keyframes spin   { from{transform:rotate(0deg);} to{transform:rotate(360deg);} }
 
-    /* ─── MARQUEE ─── */
-    .marquee-wrap {
-      border-bottom: 0.5px solid rgba(0,0,0,0.1);
-      overflow: hidden;
-      padding: 1rem 0;
-      white-space: nowrap;
-    }
-    .marquee-inner {
-      display: inline-block;
-      animation: marquee 20s linear infinite;
-    }
-    .marquee-inner span {
-      font-size: 11px;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: #aaa;
-      margin: 0 2.5rem;
-    }
-    @keyframes marquee { from{transform:translateX(0);} to{transform:translateX(-50%);} }
 
     /* ─── SECTIONS ─── */
     .section-block {
