@@ -271,28 +271,23 @@
       padding-top: 1.5rem;
     }
 
-    /* ─── RESPONSIVE ─── */
-   @media (max-width: 600px) {
-  .grid2 {
-    max-width: 100%;
-    margin: 0;
-  }
-  #archive.section-block {
-    padding-left: 0;
-    padding-right: 0;
-  }
-  .sec-label {
-    padding-left: 1.5rem;
-  }
-        .nav-links { gap: 1.0rem; }
+/* ─── RESPONSIVE ─── */
+@media (max-width: 600px) {
+  .grid2 { max-width: 100%; margin: 0; }
+  .grid2 { grid-template-columns: 1fr 1fr; gap: 3px; }
+  .nav-links { gap: 1.0rem; }
   nav { padding: 1.2rem 1.5rem; }
-      .hero-anim { display: none; }
-      .section-block { padding: 3rem 1.5rem; }
-      .grid2 { grid-template-columns: 1fr 1fr; gap: 3px; }
-      .about-row { flex-direction: column; }
-      .about-anim { display: none; }
-      footer { padding: 1.5rem; }
-    }
+  .hero-anim { display: none; }
+  .about-row { flex-direction: column; }
+  .about-anim { display: none; }
+  footer { padding: 1.5rem; }
+  .section-block { padding: 3rem 0; }
+  #archive.section-block { padding-left: 0; padding-right: 0; }
+  .sec-label { padding-left: 1.5rem; }
+  .about-text { padding-left: 1.5rem; padding-right: 1.5rem; }
+  .contact-list, .section-block > p, .section-block > a { padding-left: 1.5rem; padding-right: 1.5rem; }
+  .grid-caption { padding-left: 1.5rem; padding-right: 1.5rem; }
+}
   </style>
 </head>
 <body>
