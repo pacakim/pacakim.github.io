@@ -203,37 +203,7 @@
     .ph-7{background:#e8e6e3;} .ph-8{background:#e3ede8;} .ph-9{background:#ede3e8;}
     .ph-10{background:#e6e3ed;} .ph-11{background:#e3ede3;} .ph-12{background:#ede6e3;}
 
-    /* ─── ANIM BANNER ─── */
-    .anim-banner {
-      height: 220px;
-      overflow: hidden;
-      background: #f0ede8;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-    }
-    .orb {
-      border-radius: 50%;
-      position: absolute;
-    }
-    /* 배너 오브 — 나중에 이미지 파일로 교체 가능 */
-    .orb1{width:120px;height:120px;background:#e8e3ed;animation:orbmove1 6s ease-in-out infinite;}
-    .orb2{width:80px;height:80px;background:#e3e8e6;animation:orbmove2 5s ease-in-out infinite;}
-    .orb3{width:60px;height:60px;background:#ede9e3;animation:orbmove3 7s ease-in-out infinite;}
-    .orb4{width:40px;height:40px;background:#e6ede3;animation:orbmove4 4.5s ease-in-out infinite;}
-    @keyframes orbmove1{0%,100%{transform:translate(-60px,0);}50%{transform:translate(60px,20px);}}
-    @keyframes orbmove2{0%,100%{transform:translate(80px,10px);}50%{transform:translate(-40px,-20px);}}
-    @keyframes orbmove3{0%,100%{transform:translate(0,30px);}50%{transform:translate(50px,-30px);}}
-    @keyframes orbmove4{0%,100%{transform:translate(-80px,-20px);}50%{transform:translate(40px,20px);}}
-    .anim-banner-text {
-      font-size: 11px;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: #999;
-      z-index: 1;
-    }
-
+   
     /* ─── ABOUT ─── */
     .about-row {
       display: flex;
@@ -250,24 +220,7 @@
       text-decoration: none;
       transition: color 0.2s;
     }
-    .about-links a:hover { color: #1a1a1a; }
-    /* about 애니메이션 — 나중에 이미지 파일로 교체 가능 */
-    .about-anim {
-      width: 140px; height: 180px;
-      flex-shrink: 0;
-      position: relative;
-      overflow: hidden;
-    }
-    .leaf {
-      position: absolute;
-      border-radius: 50% 50% 50% 0;
-      transform-origin: bottom left;
-    }
-    .leaf1{width:50px;height:70px;background:#e3e8e6;animation:sway1 4s ease-in-out infinite;left:20px;bottom:10px;}
-    .leaf2{width:40px;height:55px;background:#ede9e3;animation:sway2 3.5s ease-in-out infinite;left:50px;bottom:20px;}
-    .leaf3{width:30px;height:45px;background:#e8e3ed;animation:sway1 5s ease-in-out infinite 0.5s;left:70px;bottom:5px;}
-    @keyframes sway1{0%,100%{transform:rotate(-5deg);}50%{transform:rotate(8deg);}}
-    @keyframes sway2{0%,100%{transform:rotate(5deg);}50%{transform:rotate(-8deg);}}
+
 
     /* ─── CONTACT ─── */
     .contact-list { display: flex; flex-direction: column; gap: 1.2rem; }
