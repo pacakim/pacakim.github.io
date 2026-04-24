@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — paca kim</title>
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'League Spartan', 'Helvetica Neue', Arial, sans-serif; background: #ffffff; color: #1a1a1a; }
+    nav { display: flex; justify-content: space-between; align-items: center; padding: 1.6rem 2.8rem; position: sticky; top: 0; background: #ffffff; z-index: 100; }
+    .logo img { height: 28px; }
+    .nav-links { display: flex; gap: 2.2rem; list-style: none; }
+    .nav-links a { font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: #888; text-decoration: none; transition: color 0.2s; }
+    .nav-links a:hover { color: #1a1a1a; }
+    .nav-links a.active { color: #1a1a1a; }
+    .page-wrap { max-width: 860px; margin: 0 auto; padding: 4rem 2.8rem 6rem; }
+    .sec-label { font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: #aaa; margin-bottom: 2.5rem; }
+    p { font-size: 14px; line-height: 1.9; color: #555; margin-bottom: 1rem; }
+    .commission-link {
+      display: inline-block; margin-bottom: 2rem;
+      font-size: 14px; color: #1a1a1a;
+      text-decoration: underline; text-underline-offset: 4px;
+    }
+    .contact-list { display: flex; flex-direction: column; gap: 1.2rem; margin-top: 1rem; }
+    .contact-item label { font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: #aaa; display: block; margin-bottom: 3px; }
+    .contact-item span { font-size: 13px; }
+    .contact-item a { color: #1a1a1a; text-decoration: none; }
+    footer { padding: 2rem 2.8rem; display: flex; justify-content: center; gap: 2rem; }
+    footer p { font-size: 13px; color: #888; margin-bottom: 0; }
+    @media (max-width: 600px) {
+      nav { padding: 1.2rem 1.5rem; }
+      .page-wrap { padding: 2rem 1.5rem 4rem; }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="logo"><a href="index.html"><img src="paca-logo.png" alt="paca kim"></a></div>
+    <ul class="nav-links">
+      <li><a href="index.html#archive-title">archive</a></li>
+      <li><a href="about.html">about</a></li>
+      <li><a href="contact.html" class="active">contact</a></li>
+    </ul>
+  </nav>
+  <div class="page-wrap">
+    <div class="sec-label">contact</div>
+    <p>작업 의뢰, 전시, 협업 등 모든 문의를 환영합니다.<br>일러스트레이션 작업 의뢰를 원하신다면 아래 링크를 참고하여 메일을 보내주세요.</p>
+    <p>I welcome all inquiries, including commissions, exhibitions, and collaborations.<br>If you'd like to commission an illustration, please refer to the link below and send me an email.</p>
+    <a href="commission.html" target="_blank" class="commission-link">작업의뢰 참고가이드 / Commission Request →</a>
+    <div class="contact-list">
+      <div class="contact-item">
+        <label>email</label>
+        <span><a href="mailto:super.kimpaca@gmail.com">super.kimpaca@gmail.com</a></span>
+      </div>
+      <div class="contact-item">
+        <label>instagram</label>
+        <span><a href="https://www.instagram.com/kimpaca/" target="_blank">@kimpaca</a></span>
+      </div>
+      <div class="contact-item">
+        <label>location</label>
+        <span>Seoul, Korea</span>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <p>© 2026 Paca Kim. All rights reserved.</p>
+  </footer>
+</body>
+</html>
