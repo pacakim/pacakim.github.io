@@ -1053,11 +1053,19 @@
 
       renderGrid();
 
-      let resizeTimer;
-      window.addEventListener('resize', function() {
-        clearTimeout(resizeTimer);
-        resizeTimer = setTimeout(function() { currentPage = 1; renderGrid(); }, 300);
-      });
+    let resizeTimer;
+let lastPageSize = getPageSize();
+window.addEventListener('resize', function() {
+  clearTimeout(resizeTimer);
+  resizeTimer = setTimeout(function() {
+    const newPageSize = getPageSize();
+    if (newPageSize !== lastPageSize) {
+      lastPageSize = newPageSize;
+      currentPage = 1;
+      renderGrid();
+    }
+  }, 300);
+});
     });
   </script>
 
