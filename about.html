@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About — paca kim</title>
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'League Spartan', 'Helvetica Neue', Arial, sans-serif; background: #ffffff; color: #1a1a1a; }
+    nav { display: flex; justify-content: space-between; align-items: center; padding: 1.6rem 2.8rem; position: sticky; top: 0; background: #ffffff; z-index: 100; }
+    .logo img { height: 28px; }
+    .nav-links { display: flex; gap: 2.2rem; list-style: none; }
+    .nav-links a { font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: #888; text-decoration: none; transition: color 0.2s; }
+    .nav-links a:hover { color: #1a1a1a; }
+    .nav-links a.active { color: #1a1a1a; }
+    .page-wrap { max-width: 860px; margin: 0 auto; padding: 4rem 2.8rem 6rem; }
+    .sec-label { font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: #aaa; margin-bottom: 2.5rem; }
+    .about-text p { font-size: 14px; line-height: 1.9; color: #555; }
+    .about-text p + p { margin-top: 1.5em; }
+    .about-links { margin-top: 2rem; display: flex; flex-direction: column; gap: 0.5rem; }
+    .about-links a { font-size: 12px; color: #999; letter-spacing: 0.04em; text-decoration: none; transition: color 0.2s; }
+    .about-links a:hover { color: #1a1a1a; }
+    footer { padding: 2rem 2.8rem; display: flex; justify-content: center; gap: 2rem; }
+    footer p { font-size: 13px; color: #888; }
+    @media (max-width: 600px) {
+      nav { padding: 1.2rem 1.5rem; }
+      .page-wrap { padding: 2rem 1.5rem 4rem; }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="logo"><a href="index.html"><img src="paca-logo.png" alt="paca kim"></a></div>
+    <ul class="nav-links">
+      <li><a href="index.html#archive-title">archive</a></li>
+      <li><a href="about.html" class="active">about</a></li>
+      <li><a href="contact.html">contact</a></li>
+    </ul>
+  </nav>
+  <div class="page-wrap">
+    <div class="sec-label">about</div>
+    <div class="about-text">
+      <p>일러스트레이터 김파카입니다.<br>
+      일상에서 발견한 장면들을 그림으로 그립니다.<br>
+      딱 좋은 것을 만들고 싶습니다.<br>
+      주로 물감과 드로잉으로 기록합니다. 물성이 있는 아름다운 것에 관심이 많습니다.<br>
+      전시, 출판, 브랜드 커미션 등 다양한 형식으로 작업하고 있습니다.</p>
+      <p>Paca Kim is an illustrator.<br>
+      I draw scenes found in everyday life.<br>
+      I want to make things that are just enough.<br>
+      My practice centers on paint and drawing, with a deep interest in the beauty of tangible materials.<br>
+      I work across various formats including exhibitions, publications, and brand commissions.</p>
+      <div class="about-links">
+        <a href="https://www.instagram.com/kimpaca/" target="_blank">instagram @kimpaca</a>
+        <a href="mailto:super.kimpaca@gmail.com">super.kimpaca@gmail.com</a>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <p>© 2026 Paca Kim. All rights reserved.</p>
+  </footer>
+</body>
+</html>
