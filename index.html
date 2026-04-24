@@ -312,6 +312,21 @@ footer p { font-size: 13px; color: #888; }
     .pagination button:hover { color: #1a1a1a; }
     .pagination button.active { color: #1a1a1a; font-weight: 500; }
     .pagination button:disabled { opacity: 0.3; cursor: default; }
+
+    /* ─── PANEL ─── */
+    .panel-section {
+      display: none;
+      overflow: hidden;
+      animation: slideDown 0.3s ease;
+    }
+    .panel-section.open {
+      display: block;
+    }
+    @keyframes slideDown {
+      from { opacity: 0; transform: translateY(-10px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .nav-links a.active { color: #1a1a1a; }
   </style>
 </head>
 <body>
@@ -321,8 +336,8 @@ footer p { font-size: 13px; color: #888; }
     <div class="logo"><a href="#"><img src="paca-logo.png" alt="paca kim" style="height:32px;"></a></div>
     <ul class="nav-links">
       <li><a href="#archive-title">archive</a></li>
-      <li><a href="#about">about</a></li>
-      <li><a href="#contact">contact</a></li>
+      <li><a href="#" onclick="togglePanel('about'); return false;">about</a></li>
+      <li><a href="#" onclick="togglePanel('contact'); return false;">contact</a></li>
     </ul>
   </nav>
 
@@ -946,7 +961,7 @@ footer p { font-size: 13px; color: #888; }
 
 
 <!-- ABOUT -->
-  <section class="section-block" id="about">
+  <section class="section-block panel-section" id="about">
     <div class="sec-label">about</div>
     <div class="about-row">
       <div class="about-text">
@@ -966,7 +981,7 @@ footer p { font-size: 13px; color: #888; }
   </section>
 
  <!-- CONTACT -->
-  <section class="section-block" id="contact">
+  <section class="section-block panel-section" id="contact">
     <div class="sec-label">contact</div>
      <p style="margin-bottom:1.0rem; font-size:14px; line-height:1.9; color:#555; letter-spacing:0.01em;">작업 의뢰, 전시, 협업 등 모든 문의를 환영합니다. <br>일러스트레이션 작업 의뢰를 원하신다면 아래 링크를 참고하여 메일을 보내주세요.
      </p>
@@ -1066,6 +1081,35 @@ window.addEventListener('resize', function() {
   }, 300);
 });
     });
+  </script>
+
+
+  <script>
+    function togglePanel(id) {
+      const panels = document.querySelectorAll('.panel-section');
+      const target = document.getElementById(id);
+      const isOpen = target.classList.contains('open');
+
+      // 모든 패널 닫기
+      panels.forEach(function(p) { p.classList.remove('open'); });
+
+      // nav 링크 active 초기화
+      document.querySelectorAll('.nav-links a').forEach(function(a) {
+        a.classList.remove('active');
+      });
+
+      // 클릭한 패널 토글
+      if (!isOpen) {
+        target.classList.add('open');
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        // 해당 nav 링크 active
+        document.querySelectorAll('.nav-links a').forEach(function(a) {
+          if (a.getAttribute('onclick') && a.getAttribute('onclick').includes(id)) {
+            a.classList.add('active');
+          }
+        });
+      }
+    }
   </script>
 
   <script>
