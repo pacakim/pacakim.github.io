@@ -209,13 +209,13 @@
     .contact-item span { font-size: 13px; }
 
     /* ─── FOOTER ─── */
-footer {
-  padding: 2rem 2.8rem;
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-}
-footer p { font-size: 13px; color: #888; }
+    footer {
+      padding: 2rem 2.8rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    footer p { font-size: 11px; color: #bbb; letter-spacing: 0.04em; }
 
     /* ─── MODAL ─── */
     .modal-bg {
@@ -289,6 +289,29 @@ footer p { font-size: 13px; color: #888; }
   .contact-list, .section-block > p, .section-block > a { padding-left: 1.5rem; padding-right: 1.5rem; }
   .grid-caption { padding-left: 0; padding-right: 0; }
 }
+
+    /* ─── PAGINATION ─── */
+    .pagination {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1.5rem;
+      padding: 4rem 0 2rem;
+    }
+    .pagination button {
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-family: 'League Spartan', sans-serif;
+      font-size: 18px;
+      color: #aaa;
+      padding: 0.4rem 0.8rem;
+      transition: color 0.2s;
+      letter-spacing: 0.05em;
+    }
+    .pagination button:hover { color: #1a1a1a; }
+    .pagination button.active { color: #1a1a1a; font-weight: 500; }
+    .pagination button:disabled { opacity: 0.3; cursor: default; }
   </style>
 </head>
 <body>
@@ -968,10 +991,75 @@ footer p { font-size: 13px; color: #888; }
 
   <!-- FOOTER -->
   <footer>
-    <p>© 2026 Paca Kim. All rights reserved.</p>
+    <p>© 2026 paca kim. All rights reserved.</p>
+    <p>seoul, Korea</p>
   </footer>
 
   <!-- MODAL -->
+
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const grid = document.querySelector('.grid2');
+      const allCards = Array.from(grid.querySelectorAll('.grid-item-wrap'));
+
+      function getPageSize() {
+        return window.innerWidth <= 600 ? 20 : 30;
+      }
+
+      let currentPage = 1;
+
+      function renderGrid() {
+        const pageSize = getPageSize();
+        const totalPages = Math.ceil(allCards.length / pageSize);
+        const start = (currentPage - 1) * pageSize;
+        const pageCards = allCards.slice(start, start + pageSize);
+
+        grid.innerHTML = '';
+        pageCards.forEach(function(card) { grid.appendChild(card); });
+
+        const existing = document.querySelector('.pagination');
+        if (existing) existing.remove();
+
+        if (totalPages <= 1) return;
+
+        const nav = document.createElement('div');
+        nav.className = 'pagination';
+
+        const prev = document.createElement('button');
+        prev.textContent = '‹';
+        prev.disabled = currentPage === 1;
+        prev.onclick = function() { currentPage--; renderGrid(); window.scrollTo(0,0); };
+        nav.appendChild(prev);
+
+        for (let i = 1; i <= totalPages; i++) {
+          const btn = document.createElement('button');
+          btn.textContent = i;
+          if (i === currentPage) btn.classList.add('active');
+          btn.onclick = (function(page) {
+            return function() { currentPage = page; renderGrid(); window.scrollTo(0,0); };
+          })(i);
+          nav.appendChild(btn);
+        }
+
+        const next = document.createElement('button');
+        next.textContent = '›';
+        next.disabled = currentPage === totalPages;
+        next.onclick = function() { currentPage++; renderGrid(); window.scrollTo(0,0); };
+        nav.appendChild(next);
+
+        grid.after(nav);
+      }
+
+      renderGrid();
+
+      let resizeTimer;
+      window.addEventListener('resize', function() {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(function() { currentPage = 1; renderGrid(); }, 300);
+      });
+    });
+  </script>
 
   <script>
     function openModal(title, year, cat, text, img1, img2, img3, img4) {
