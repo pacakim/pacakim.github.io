@@ -289,6 +289,28 @@
   .contact-list, .section-block > p, .section-block > a { padding-left: 1.5rem; padding-right: 1.5rem; }
   .grid-caption { padding-left: 0; padding-right: 0; }
 }
+
+    /* ─── PAGINATION ─── */
+    .pagination {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.8rem;
+      padding: 3rem 0 1rem;
+    }
+    .pagination button {
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-family: 'League Spartan', sans-serif;
+      font-size: 14px;
+      color: #aaa;
+      padding: 0.3rem 0.6rem;
+      transition: color 0.2s;
+    }
+    .pagination button:hover { color: #1a1a1a; }
+    .pagination button.active { color: #1a1a1a; font-weight: 500; }
+    .pagination button.arrow { font-size: 18px; }
   </style>
 </head>
 <body>
@@ -306,597 +328,8 @@
   <!-- HERO -->
 <section class="hero" style="flex-direction:column; align-items:center; text-align:center; padding:0 0 2rem;"
  <div style="text-align:center; margin-bottom:3rem;">
-<img src="main.JPG" alt="paca kim" style="width:100%; max-width:1200px; height:auto; object-fit:contain;">
-</div>
-
-  <div style="max-width:600px; margin-top:1.5rem;">
-    <h2 id="archive-title" style="font-size:28px; font-weight:700; letter-spacing:0.12em; margin-bottom:1.2rem;">ARCHIVE</h2>
-    <p style="font-size:14px; line-height:2.2; letter-spacing:0.06em; color:#555;">
-      책, 삽화, 전시, 브랜드 일러스트레이션, 아침드로잉 작업을 합니다.<br>
-      Create work in books, illustration, exhibitions, brand illustration, <br>and morning drawing practices.
-    </p>
-  </div>
-</section>
-
-
-  <!-- ARCHIVE -->
-  <section class="section-block" id="archive">
-    <div class="grid2">
-
-      <!-- 작업 추가 방법:
-           1. 아래 블록을 복사
-           2. ph-숫자 클래스를 삭제하고 style="background-image:url('images/파일명.jpg');background-size:cover;background-position:center;" 추가
-           3. onclick 안의 텍스트 수정
-      -->
-
-<div class="grid-item-wrap">
-  <div class="grid-item" onclick="location.href='koala.html'">
-    <div class="ph-img" style="background-image:url('images/koala-1.jpg');background-size:cover;background-position:center;"></div>
-    <div class="ov"></div>
-  </div>
-  <div class="grid-caption">
-    <div class="cap-meta">zine · 2026</div>
-    <div class="cap-title">코알라와 테니스레슨 ZINE</div>
-  </div>
-</div>
-      
-<div class="grid-item-wrap">
-  <div class="grid-item" onclick="location.href='thank.html'">
-    <div class="ph-img" style="background-image:url('images/thank-1.jpg');background-size:cover;background-position:center;"></div>
-    <div class="ov"></div>
-  </div>
-  <div class="grid-caption">
-    <div class="cap-meta">original works · 2026</div>
-    <div class="cap-title">고마워서그래 엽서 Original works</div>
-  </div>
-</div>
-
-      <div class="grid-item-wrap">
-  <div class="grid-item" onclick="location.href='rice.html'">
-    <div class="ph-img" style="background-image:url('images/rice-1.jpg');background-size:cover;background-position:center;"></div>
-    <div class="ov"></div>
-  </div>
-  <div class="grid-caption">
-    <div class="cap-meta">package illustration · 2026</div>
-    <div class="cap-title">이천미감</div>
-  </div>
-</div>
-
-<div class="grid-item-wrap">
-  <div class="grid-item" onclick="location.href='cal2026.html'" style="position:relative;">
-    <img src="images/cal2026-1.gif" style="width:100%;height:100%;object-fit:cover;display:block;">
-    <div class="ov"></div>
-  </div>
-  <div class="grid-caption">
-    <div class="cap-meta">calendar · 2026</div>
-    <div class="cap-title">Breakfast Calendar 2026</div>
-  </div>
-</div>
-      
-<div class="grid-item-wrap">
-  <div class="grid-item" onclick="location.href='tabf.html'">
-    <div class="ph-img" style="background-image:url('images/tabf-1.jpg');background-size:cover;background-position:center;"></div>
-    <div class="ov"></div>
-  </div>
-  <div class="grid-caption">
-    <div class="cap-meta">art book fair · 2025</div>
-    <div class="cap-title">TOKYO ART BOOK FAIR 2025</div>
-  </div>
-</div>
-
-<div class="grid-item-wrap">
-  <div class="grid-item" onclick="location.href='10books.html'">
-    <div class="ph-img" style="background-image:url('images/10books-0.jpg');background-size:cover;background-position:center;"></div>
-    <div class="ov"></div>
-  </div>
-  <div class="grid-caption">
-    <div class="cap-meta">zine · 2025</div>
-    <div class="cap-title">〈내가 좋아하는 10권의 책〉 zine</div>
-  </div>
-</div>
-      
-<div class="grid-item-wrap">
-  <div class="grid-item" onclick="location.href='onegrove.html'">
-    <div class="ph-img" style="background-image:url('images/one-9.jpg');background-size:cover;background-position:center;"></div>
-    <div class="ov"></div>
-  </div>
-  <div class="grid-caption">
-    <div class="cap-meta">illustration · 2025</div>
-    <div class="cap-title">ONE GROVE</div>
-  </div>
-</div>
-      
-<div class="grid-item-wrap">
-  <div class="grid-item" onclick="location.href='folin.html'">
-    <div class="ph-img" style="background-image:url('images/folin-1.jpg');background-size:cover;background-position:center;"></div>
-    <div class="ov"></div>
-  </div>
-  <div class="grid-caption">
-    <div class="cap-meta">illustration · 2025</div>
-    <div class="cap-title">폴인 fol:in 〈일잘러의 취미생활〉</div>
-  </div>
-</div>
-
-<div class="grid-item-wrap">
-  <div class="grid-item" onclick="location.href='cjjeju.html'">
-    <div class="ph-img" style="background-image:url('images/cjjeju-1.jpg');background-size:cover;background-position:center;"></div>
-    <div class="ov"></div>
-  </div>
-  <div class="grid-caption">
-    <div class="cap-meta">zine · 2025</div>
-    <div class="cap-title">Creative Journey Vol.2 제주</div>
-  </div>
-</div>
-      
-<div class="grid-item-wrap">
-  <div class="grid-item" onclick="location.href='cal2025.html'">
-    <div class="ph-img" style="background-image:url('images/cal2025-1.jpeg');background-size:cover;background-position:center;"></div>
-    <div class="ov"></div>
-  </div>
-  <div class="grid-caption">
-    <div class="cap-meta">calendar · 2025</div>
-    <div class="cap-title">초록의 아침 Calendar 2025</div>
-  </div>
-</div>
-      
-<div class="grid-item-wrap">
-  <div class="grid-item" onclick="location.href='gyul.html'">
-    <div class="ph-img" style="background-image:url('images/gyul-1.JPG');background-size:cover;background-position:center;"></div>
-    <div class="ov"></div>
-  </div>
-  <div class="grid-caption">
-    <div class="cap-meta">exhibition · 2024</div>
-    <div class="cap-title">귤로부터 / Issu de la mandarine</div>
-  </div>
-</div>
-
-<div class="grid-item-wrap">
-  <div class="grid-item" onclick="location.href='sunfather.html'">
-    <div class="ph-img" style="background-image:url('images/sunfather-1.jpg');background-size:cover;background-position:center;"></div>
-    <div class="ov"></div>
-  </div>
-  <div class="grid-caption">
-    <div class="cap-meta">logo illustration · 2024</div>
-    <div class="cap-title">Sunday Fathers Club Renewal</div>
-  </div>
-</div>
-
-      <div class="grid-item-wrap">
-  <div class="grid-item" onclick="location.href='cjgunsan.html'">
-    <div class="ph-img" style="background-image:url('images/cjgunsan-0.jpg');background-size:cover;background-position:center;"></div>
-    <div class="ov"></div>
-  </div>
-  <div class="grid-caption">
-    <div class="cap-meta">zine · 2024</div>
-    <div class="cap-title">Creative Journey Vol.1 군산</div>
-  </div>
-</div>
-
-<div class="grid-item-wrap">
-  <div class="grid-item" onclick="location.href='parnas24.html'">
-    <div class="ph-img" style="background-image:url('images/Parnas-24-1.jpg');background-size:cover;background-position:center;"></div>
-    <div class="ov"></div>
-  </div>
-  <div class="grid-caption">
-    <div class="cap-meta">brand illustration · 2024</div>
-    <div class="cap-title">PARNAS MALL — 일하는 사람들 연재</div>
-  </div>
-</div>
-      
-      <div class="grid-item-wrap">
-  <div class="grid-item" onclick="location.href='mellow.html'">
-    <div class="ph-img" style="background-image:url('images/mellow-1.jpg');background-size:cover;background-position:center;"></div>
-    <div class="ov"></div>
-  </div>
-  <div class="grid-caption">
-    <div class="cap-meta">brand illustration · 2024</div>
-    <div class="cap-title">The Mellow Gardener — Winter Collection</div>
-  </div>
-</div>
-      
-<div class="grid-item-wrap">
-  <div class="grid-item" onclick="location.href='hotel.html'">
-    <div class="ph-img" style="background-image:url('images/hotel-2.jpg');background-size:cover;background-position:center;"></div>
-    <div class="ov"></div>
-  </div>
-  <div class="grid-caption">
-    <div class="cap-meta">illustration · 2024</div>
-    <div class="cap-title">『유럽호텔여행』 오마주 일러스트레이션</div>
-  </div>
-</div>
-      
-<div class="grid-item-wrap">
-  <div class="grid-item" onclick="location.href='gov.html'">
-    <div class="ph-img" style="background-image:url('images/gov-1.jpg');background-size:cover;background-position:center;"></div>
-    <div class="ov"></div>
-  </div>
-  <div class="grid-caption">
-    <div class="cap-meta">illustration · 2024</div>
-    <div class="cap-title">보건복지부 정책 일러스트레이션</div>
-  </div>
-</div>
-      
-<div class="grid-item-wrap">
-  <div class="grid-item" onclick="location.href='poet.html'">
-    <div class="ph-img" style="background-image:url('images/poet-1.png');background-size:cover;background-position:center;"></div>
-    <div class="ov"></div>
-  </div>
-  <div class="grid-caption">
-    <div class="cap-meta">book illustration · 2024</div>
-    <div class="cap-title">『꽃이 사람이다』 나태주 산문집 삽화</div>
-  </div>
-</div>
-      
-<div class="grid-item-wrap">
-  <div class="grid-item" onclick="location.href='parnas.html'">
-    <div class="ph-img" style="background-image:url('images/parnas-2.jpg');background-size:cover;background-position:center;"></div>
-    <div class="ov"></div>
-  </div>
-  <div class="grid-caption">
-    <div class="cap-meta">space illustration · 2023</div>
-    <div class="cap-title">파르나스몰 라운지 일러스트레이션</div>
-  </div>
-</div>
-
-<div class="grid-item-wrap">
-  <div class="grid-item" onclick="location.href='earlybird.html'">
-    <div class="ph-img" style="background-image:url('images/earlybird-1.jpg');background-size:cover;background-position:center;"></div>
-    <div class="ov"></div>
-  </div>
-  <div class="grid-caption">
-    <div class="cap-meta">book · 2023</div>
-    <div class="cap-title">아침그림모음집 『EARLY BIRD』</div>
-  </div>
-</div>
-      
-<div class="grid-item-wrap">
-  <div class="grid-item" onclick="location.href='piece.html'">
-    <div class="ph-img" style="background-image:url('images/piece-1.jpg');background-size:cover;background-position:center;"></div>
-    <div class="ov"></div>
-  </div>
-  <div class="grid-caption">
-    <div class="cap-meta">original painting · 2023</div>
-    <div class="cap-title">Piece drawing</div>
-  </div>
-</div>
-
-<div class="grid-item-wrap">
-  <div class="grid-item" onclick="location.href='calendar2024.html'">
-    <div class="ph-img" style="background-image:url('images/calendar2024-0.jpg');background-size:cover;background-position:center;"></div>
-    <div class="ov"></div>
-  </div>
-  <div class="grid-caption">
-    <div class="cap-meta">calendar · 2024</div>
-    <div class="cap-title">Small Veranda Calendar 2024</div>
-  </div>
-</div>
-      
-<div class="grid-item-wrap">
-  <div class="grid-item" onclick="location.href='pieceoriginal.html'">
-    <div class="ph-img" style="background-image:url('images/pieceoriginal-1.jpg');background-size:cover;background-position:center;"></div>
-    <div class="ov"></div>
-  </div>
-  <div class="grid-caption">
-    <div class="cap-meta">original painting · 2023</div>
-    <div class="cap-title">〈Piece by piece〉 원화</div>
-  </div>
-</div>
-      
-<div class="grid-item-wrap">
-  <div class="grid-item" onclick="location.href='pieceby.html'">
-    <div class="ph-img" style="background-image:url('images/pieceby-1.png');background-size:cover;background-position:center;"></div>
-    <div class="ov"></div>
-  </div>
-  <div class="grid-caption">
-    <div class="cap-meta">exhibition · 2023</div>
-    <div class="cap-title">Piece by piece : CALLING BOOKS</div>
-  </div>
-</div>
-
-<div class="grid-item-wrap">
-  <div class="grid-item" onclick="location.href='publishers.html'">
-    <div class="ph-img" style="background-image:url('images/publishers-9.jpeg');background-size:cover;background-position:center;"></div>
-    <div class="ov"></div>
-  </div>
-  <div class="grid-caption">
-    <div class="cap-meta">book fair · 2023</div>
-    <div class="cap-title">Seoul Publishers Table</div>
-  </div>
-</div>
-<div class="grid-item-wrap">
-  <div class="grid-item" onclick="location.href='via.html'">
-    <div class="ph-img" style="background-image:url('images/via-7.jpg');background-size:cover;background-position:center;"></div>
-    <div class="ov"></div>
-  </div>
-  <div class="grid-caption">
-    <div class="cap-meta">brand illustration · 2023</div>
-    <div class="cap-title">Viaplain × READYTOKICK × 박민주</div>
-  </div>
-</div>
-      
-<div class="grid-item-wrap">
-  <div class="grid-item" onclick="location.href='swimcap.html'" style="position:relative;">
-    <img src="images/swimcap-1.gif" style="width:100%;height:100%;object-fit:cover;display:block;">
-    <div class="ov"></div>
-  </div>
-  <div class="grid-caption">
-    <div class="cap-meta">brand illustration · 2023</div>
-    <div class="cap-title">READYTOKICK SWIM CAP illustration</div>
-  </div>
-</div>
-
-<div class="grid-item-wrap">
-  <div class="grid-item" onclick="location.href='cartoon.html'">
-    <div class="ph-img" style="background-image:url('images/cartoon-1.jpg');background-size:cover;background-position:center;"></div>
-    <div class="ov"></div>
-  </div>
-  <div class="grid-caption">
-    <div class="cap-meta">cartoon illustration · 2023</div>
-    <div class="cap-title">READY TO KICK Cartoon Episode 2</div>
-  </div>
-</div>
-
-<div class="grid-item-wrap">
-  <div class="grid-item" onclick="location.href='seoulforest.html'">
-    <div class="ph-img" style="background-image:url('images/seoulforest-1.jpg');background-size:cover;background-position:center;"></div>
-    <div class="ov"></div>
-  </div>
-  <div class="grid-caption">
-    <div class="cap-meta">drawing · 2023</div>
-    <div class="cap-title">Seoul Forest</div>
-  </div>
-</div>
-
-<div class="grid-item-wrap">
-  <div class="grid-item" onclick="location.href='wardrobe.html'">
-    <div class="ph-img" style="background-image:url('images/oil-1.jpg');background-size:cover;background-position:center;"></div>
-    <div class="ov"></div>
-  </div>
-  <div class="grid-caption">
-    <div class="cap-meta">drawing · 2023</div>
-    <div class="cap-title">Wardrobe</div>
-  </div>
-</div>
-
-      <div class="grid-item-wrap">
-  <div class="grid-item" onclick="location.href='meetme.html'">
-    <div class="ph-img" style="background-image:url('images/meetme-1.jpg');background-size:cover;background-position:center;"></div>
-    <div class="ov"></div>
-  </div>
-  <div class="grid-caption">
-    <div class="cap-meta">drawing · 2023</div>
-    <div class="cap-title">밑미 리추얼 〈아침 15분 낙서하듯 그리기〉</div>
-  </div>
-</div>
-      
-<div class="grid-item-wrap">
-  <div class="grid-item" onclick="location.href='lifezip.html'">
-    <div class="ph-img" style="background-image:url('images/lifezip-1.jpg');background-size:cover;background-position:center;"></div>
-    <div class="ov"></div>
-  </div>
-  <div class="grid-caption">
-    <div class="cap-meta">magazine interview · 2023</div>
-    <div class="cap-title">라이프집 Do Not Disturb</div>
-  </div>
-</div>
-
-   <div class="grid-item-wrap">
-  <div class="grid-item" onclick="location.href='cjbook.html'">
-    <div class="ph-img" style="background-image:url('images/cjbook-1.jpg');background-size:cover;background-position:center;"></div>
-    <div class="ov"></div>
-  </div>
-  <div class="grid-caption">
-    <div class="cap-meta">book · 2023</div>
-    <div class="cap-title">『청주에 다녀왔습니다』</div>
-  </div>
-</div>   
-
-<div class="grid-item-wrap">
-  <div class="grid-item" onclick="location.href='nexfl.html'" style="position:relative;">
-    <img src="images/nexfl-3.gif" style="width:100%;height:100%;object-fit:cover;display:block;">
-    <div class="ov"></div>
-  </div>
-  <div class="grid-caption">
-    <div class="cap-meta">illustration · 2023</div>
-    <div class="cap-title">넷플연가</div>
-  </div>
-</div>
-
-      <div class="grid-item-wrap">
-  <div class="grid-item" onclick="location.href='carrot.html'">
-    <div class="ph-img" style="background-image:url('images/carrot-2.jpeg');background-size:cover;background-position:center;"></div>
-    <div class="ov"></div>
-  </div>
-  <div class="grid-caption">
-    <div class="cap-meta">calendar · 2023</div>
-    <div class="cap-title">I don't eat carrot calendar 2023</div>
-  </div>
-</div>
-      
-<div class="grid-item-wrap">
-  <div class="grid-item" onclick="location.href='gleer.html'">
-    <div class="ph-img" style="background-image:url('images/gleer-1.jpg');background-size:cover;background-position:center;"></div>
-    <div class="ov"></div>
-  </div>
-  <div class="grid-caption">
-    <div class="cap-meta">brand illustration · 2022</div>
-    <div class="cap-title">Gleer</div>
-  </div>
-</div>
-      
-
-
-<div class="grid-item-wrap">
-  <div class="grid-item" onclick="location.href='wechik.html'">
-    <div class="ph-img" style="background-image:url('images/wechik-1.jpg');background-size:cover;background-position:center;"></div>
-    <div class="ov"></div>
-  </div>
-  <div class="grid-caption">
-    <div class="cap-meta">brand illustration · 2022</div>
-    <div class="cap-title">WECHIK</div>
-  </div>
-</div>
-
-     <div class="grid-item-wrap">
-  <div class="grid-item" onclick="location.href='hb.html'">
-    <div class="ph-img" style="background-image:url('images/hb-1.jpg');background-size:cover;background-position:center;"></div>
-    <div class="ov"></div>
-  </div>
-  <div class="grid-caption">
-    <div class="cap-meta">brand illustration · 2022</div>
-    <div class="cap-title">효창복싱 / Hyochang Boxing</div>
-  </div>
-</div>
-      
-      
- <div class="grid-item-wrap">
-  <div class="grid-item" onclick="location.href='cilocala.html'">
-    <div class="ph-img" style="background-image:url('images/cilocala-1.jpg');background-size:cover;background-position:center;"></div>
-    <div class="ov"></div>
-  </div>
-  <div class="grid-caption">
-    <div class="cap-meta">character illustration · 2022</div>
-    <div class="cap-title">CILOCALA</div>
-  </div>
-</div>
-
-<div class="grid-item-wrap">
-  <div class="grid-item" onclick="location.href='estival.html'">
-    <div class="ph-img" style="background-image:url('images/estival-1.jpg');background-size:cover;background-position:center;"></div>
-    <div class="ov"></div>
-  </div>
-  <div class="grid-caption">
-    <div class="cap-meta">brand illustration · 2022</div>
-    <div class="cap-title">Estival Grocery Market</div>
-  </div>
-</div>
-      
-<div class="grid-item-wrap">
-  <div class="grid-item" onclick="location.href='kdi.html'">
-    <div class="ph-img" style="background-image:url('images/kdi-1.jpeg');background-size:cover;background-position:center;"></div>
-    <div class="ov"></div>
-  </div>
-  <div class="grid-caption">
-    <div class="cap-meta">magazine illustration · 2022</div>
-    <div class="cap-title">KDI 나라경제</div>
-  </div>
-</div>
-      
-<div class="grid-item-wrap">
-  <div class="grid-item" onclick="location.href='emoticon.html'">
-    <div class="ph-img" style="background-image:url('images/emoticon-9.gif');background-size:cover;background-position:center;"></div>
-    <div class="ov"></div>
-  </div>
-  <div class="grid-caption">
-    <div class="cap-meta">emoticon · 2021</div>
-    <div class="cap-title">카카오 이모티콘 "김호랭이 오늘의 운세"</div>
-  </div>
-</div>
-
-<div class="grid-item-wrap">
-  <div class="grid-item" onclick="location.href='sikmul.html'">
-    <div class="ph-img" style="background-image:url('images/sikmul-1.jpg');background-size:cover;background-position:center;"></div>
-    <div class="ov"></div>
-  </div>
-  <div class="grid-caption">
-    <div class="cap-meta">book illustration · 2021</div>
-    <div class="cap-title">『식물 상담』 일러스트레이션</div>
-  </div>
-</div>
-
-<div class="grid-item-wrap">
-  <div class="grid-item" onclick="location.href='cakebox.html'">
-    <div class="ph-img" style="background-image:url('images/cakebox-1.jpg');background-size:cover;background-position:center;"></div>
-    <div class="ov"></div>
-  </div>
-  <div class="grid-caption">
-    <div class="cap-meta">package illustration · 2021</div>
-    <div class="cap-title">Cake Box Illustration</div>
-  </div>
-</div>
-      
-<div class="grid-item-wrap">
-  <div class="grid-item" onclick="location.href='munbal.html'">
-    <div class="ph-img" style="background-image:url('images/munbal-1.png');background-size:cover;background-position:center;"></div>
-    <div class="ov"></div>
-  </div>
-  <div class="grid-caption">
-    <div class="cap-meta">book talk & drawing workshop · 2021</div>
-    <div class="cap-title">문발포레스트 〈최선의 하루를 위한 식물루틴〉</div>
-  </div>
-</div>
-
-
-<div class="grid-item-wrap">
-  <div class="grid-item" onclick="location.href='sam.html'">
-    <div class="ph-img" style="background-image:url('images/sam-1.jpg');background-size:cover;background-position:center;"></div>
-    <div class="ov"></div>
-  </div>
-  <div class="grid-caption">
-    <div class="cap-meta">book · 2021</div>
-    <div class="cap-title">『집 나간 의욕을 찾습니다』</div>
-  </div>
-</div>
-      
-<div class="grid-item-wrap">
-  <div class="grid-item" onclick="location.href='directory.html'">
-    <div class="ph-img" style="background-image:url('images/directory-1.jpg');background-size:cover;background-position:center;"></div>
-    <div class="ov"></div>
-  </div>
-  <div class="grid-caption">
-    <div class="cap-meta">interview · 2021</div>
-    <div class="cap-title">디렉토리 매거진 인터뷰</div>
-  </div>
-</div>
-
-      <div class="grid-item-wrap">
-  <div class="grid-item" onclick="location.href='wellperion.html'">
-    <div class="ph-img" style="background-image:url('images/wellperion-1.jpg');background-size:cover;background-position:center;"></div>
-    <div class="ov"></div>
-  </div>
-  <div class="grid-caption">
-    <div class="cap-meta">magazine illustration · 2020</div>
-    <div class="cap-title">WELLPERION Magazine</div>
-  </div>
-</div>
-      
-<div class="grid-item-wrap">
-  <div class="grid-item" onclick="location.href='lala.html'">
-    <div class="ph-img" style="background-image:url('images/lala-1.jpg');background-size:cover;background-position:center;"></div>
-    <div class="ov"></div>
-  </div>
-  <div class="grid-caption">
-    <div class="cap-meta">catalogue · 2020</div>
-    <div class="cap-title">Flower and Plants Shop Catalogue</div>
-  </div>
-</div>
-
-<div class="grid-item-wrap">
-  <div class="grid-item" onclick="location.href='camel.html'">
-    <div class="ph-img" style="background-image:url('images/camel-1.jpg');background-size:cover;background-position:center;"></div>
-    <div class="ov"></div>
-  </div>
-  <div class="grid-caption">
-    <div class="cap-meta">book · 2020</div>
-    <div class="cap-title">『내 방의 작은 식물은 언제나 나보다 큽니다』</div>
-  </div>
-</div>      
-      
-<div class="grid-item-wrap">
-  <div class="grid-item" onclick="location.href='pendrawing.html'">
-    <div class="ph-img" style="background-image:url('images/20line-1.jpg');background-size:cover;background-position:center;"></div>
-    <div class="ov"></div>
-  </div>
-  <div class="grid-caption">
-    <div class="cap-meta">drawing · 2020</div>
-    <div class="cap-title">Pen Drawing</div>
-  </div>
-</div>
-      
-<div class="grid-item-wrap">
-  <div class="grid-item" onclick="location.href='ipad2020.html'">
-    <div class="ph-img" style="background-image:url('images/ipad-drawing-2020-1.png');background-size:cover;background-position:center;"></div>
-    <div class="ov"></div>
+<img src="main.JPG" alt="paca kim" style=<div class="grid2">
+    </div>div>
   </div>
   <div class="grid-caption">
     <div class="cap-meta">drawing · 2020</div>
@@ -1024,6 +457,606 @@
         }
       }, { passive: true });
     })();
+  </script>
+
+
+  <script>
+    const allItems = [`<div class="grid-item-wrap">
+  <div class="grid-item" onclick="location.href='koala.html'">
+    <div class="ph-img" style="background-image:url('images/koala-1.jpg');background-size:cover;background-position:center;"></div>
+    <div class="ov"></div>
+  </div>
+  <div class="grid-caption">
+    <div class="cap-meta">zine · 2026</div>
+    <div class="cap-title">코알라와 테니스레슨 ZINE</div>
+  </div>
+</div>`,
+`<div class="grid-item-wrap">
+  <div class="grid-item" onclick="location.href='thank.html'">
+    <div class="ph-img" style="background-image:url('images/thank-1.jpg');background-size:cover;background-position:center;"></div>
+    <div class="ov"></div>
+  </div>
+  <div class="grid-caption">
+    <div class="cap-meta">original works · 2026</div>
+    <div class="cap-title">고마워서그래 엽서 Original works</div>
+  </div>
+</div>`,
+`<div class="grid-item-wrap">
+  <div class="grid-item" onclick="location.href='rice.html'">
+    <div class="ph-img" style="background-image:url('images/rice-1.jpg');background-size:cover;background-position:center;"></div>
+    <div class="ov"></div>
+  </div>
+  <div class="grid-caption">
+    <div class="cap-meta">package illustration · 2026</div>
+    <div class="cap-title">이천미감</div>
+  </div>
+</div>`,
+`<div class="grid-item-wrap">
+  <div class="grid-item" onclick="location.href='cal2026.html'" style="position:relative;">
+    <img src="images/cal2026-1.gif" style="width:100%;height:100%;object-fit:cover;display:block;">
+    <div class="ov"></div>
+  </div>
+  <div class="grid-caption">
+    <div class="cap-meta">calendar · 2026</div>
+    <div class="cap-title">Breakfast Calendar 2026</div>
+  </div>
+</div>`,
+`<div class="grid-item-wrap">
+  <div class="grid-item" onclick="location.href='tabf.html'">
+    <div class="ph-img" style="background-image:url('images/tabf-1.jpg');background-size:cover;background-position:center;"></div>
+    <div class="ov"></div>
+  </div>
+  <div class="grid-caption">
+    <div class="cap-meta">art book fair · 2025</div>
+    <div class="cap-title">TOKYO ART BOOK FAIR 2025</div>
+  </div>
+</div>`,
+`<div class="grid-item-wrap">
+  <div class="grid-item" onclick="location.href='10books.html'">
+    <div class="ph-img" style="background-image:url('images/10books-0.jpg');background-size:cover;background-position:center;"></div>
+    <div class="ov"></div>
+  </div>
+  <div class="grid-caption">
+    <div class="cap-meta">zine · 2025</div>
+    <div class="cap-title">〈내가 좋아하는 10권의 책〉 zine</div>
+  </div>
+</div>`,
+`<div class="grid-item-wrap">
+  <div class="grid-item" onclick="location.href='onegrove.html'">
+    <div class="ph-img" style="background-image:url('images/one-9.jpg');background-size:cover;background-position:center;"></div>
+    <div class="ov"></div>
+  </div>
+  <div class="grid-caption">
+    <div class="cap-meta">illustration · 2025</div>
+    <div class="cap-title">ONE GROVE</div>
+  </div>
+</div>`,
+`<div class="grid-item-wrap">
+  <div class="grid-item" onclick="location.href='folin.html'">
+    <div class="ph-img" style="background-image:url('images/folin-1.jpg');background-size:cover;background-position:center;"></div>
+    <div class="ov"></div>
+  </div>
+  <div class="grid-caption">
+    <div class="cap-meta">illustration · 2025</div>
+    <div class="cap-title">폴인 fol:in 〈일잘러의 취미생활〉</div>
+  </div>
+</div>`,
+`<div class="grid-item-wrap">
+  <div class="grid-item" onclick="location.href='cjjeju.html'">
+    <div class="ph-img" style="background-image:url('images/cjjeju-1.jpg');background-size:cover;background-position:center;"></div>
+    <div class="ov"></div>
+  </div>
+  <div class="grid-caption">
+    <div class="cap-meta">zine · 2025</div>
+    <div class="cap-title">Creative Journey Vol.2 제주</div>
+  </div>
+</div>`,
+`<div class="grid-item-wrap">
+  <div class="grid-item" onclick="location.href='cal2025.html'">
+    <div class="ph-img" style="background-image:url('images/cal2025-1.jpeg');background-size:cover;background-position:center;"></div>
+    <div class="ov"></div>
+  </div>
+  <div class="grid-caption">
+    <div class="cap-meta">calendar · 2025</div>
+    <div class="cap-title">초록의 아침 Calendar 2025</div>
+  </div>
+</div>`,
+`<div class="grid-item-wrap">
+  <div class="grid-item" onclick="location.href='gyul.html'">
+    <div class="ph-img" style="background-image:url('images/gyul-1.JPG');background-size:cover;background-position:center;"></div>
+    <div class="ov"></div>
+  </div>
+  <div class="grid-caption">
+    <div class="cap-meta">exhibition · 2024</div>
+    <div class="cap-title">귤로부터 / Issu de la mandarine</div>
+  </div>
+</div>`,
+`<div class="grid-item-wrap">
+  <div class="grid-item" onclick="location.href='sunfather.html'">
+    <div class="ph-img" style="background-image:url('images/sunfather-1.jpg');background-size:cover;background-position:center;"></div>
+    <div class="ov"></div>
+  </div>
+  <div class="grid-caption">
+    <div class="cap-meta">logo illustration · 2024</div>
+    <div class="cap-title">Sunday Fathers Club Renewal</div>
+  </div>
+</div>`,
+`<div class="grid-item-wrap">
+  <div class="grid-item" onclick="location.href='cjgunsan.html'">
+    <div class="ph-img" style="background-image:url('images/cjgunsan-0.jpg');background-size:cover;background-position:center;"></div>
+    <div class="ov"></div>
+  </div>
+  <div class="grid-caption">
+    <div class="cap-meta">zine · 2024</div>
+    <div class="cap-title">Creative Journey Vol.1 군산</div>
+  </div>
+</div>`,
+`<div class="grid-item-wrap">
+  <div class="grid-item" onclick="location.href='parnas24.html'">
+    <div class="ph-img" style="background-image:url('images/Parnas-24-1.jpg');background-size:cover;background-position:center;"></div>
+    <div class="ov"></div>
+  </div>
+  <div class="grid-caption">
+    <div class="cap-meta">brand illustration · 2024</div>
+    <div class="cap-title">PARNAS MALL — 일하는 사람들 연재</div>
+  </div>
+</div>`,
+`<div class="grid-item-wrap">
+  <div class="grid-item" onclick="location.href='mellow.html'">
+    <div class="ph-img" style="background-image:url('images/mellow-1.jpg');background-size:cover;background-position:center;"></div>
+    <div class="ov"></div>
+  </div>
+  <div class="grid-caption">
+    <div class="cap-meta">brand illustration · 2024</div>
+    <div class="cap-title">The Mellow Gardener — Winter Collection</div>
+  </div>
+</div>`,
+`<div class="grid-item-wrap">
+  <div class="grid-item" onclick="location.href='hotel.html'">
+    <div class="ph-img" style="background-image:url('images/hotel-2.jpg');background-size:cover;background-position:center;"></div>
+    <div class="ov"></div>
+  </div>
+  <div class="grid-caption">
+    <div class="cap-meta">illustration · 2024</div>
+    <div class="cap-title">『유럽호텔여행』 오마주 일러스트레이션</div>
+  </div>
+</div>`,
+`<div class="grid-item-wrap">
+  <div class="grid-item" onclick="location.href='gov.html'">
+    <div class="ph-img" style="background-image:url('images/gov-1.jpg');background-size:cover;background-position:center;"></div>
+    <div class="ov"></div>
+  </div>
+  <div class="grid-caption">
+    <div class="cap-meta">illustration · 2024</div>
+    <div class="cap-title">보건복지부 정책 일러스트레이션</div>
+  </div>
+</div>`,
+`<div class="grid-item-wrap">
+  <div class="grid-item" onclick="location.href='poet.html'">
+    <div class="ph-img" style="background-image:url('images/poet-1.png');background-size:cover;background-position:center;"></div>
+    <div class="ov"></div>
+  </div>
+  <div class="grid-caption">
+    <div class="cap-meta">book illustration · 2024</div>
+    <div class="cap-title">『꽃이 사람이다』 나태주 산문집 삽화</div>
+  </div>
+</div>`,
+`<div class="grid-item-wrap">
+  <div class="grid-item" onclick="location.href='parnas.html'">
+    <div class="ph-img" style="background-image:url('images/parnas-2.jpg');background-size:cover;background-position:center;"></div>
+    <div class="ov"></div>
+  </div>
+  <div class="grid-caption">
+    <div class="cap-meta">space illustration · 2023</div>
+    <div class="cap-title">파르나스몰 라운지 일러스트레이션</div>
+  </div>
+</div>`,
+`<div class="grid-item-wrap">
+  <div class="grid-item" onclick="location.href='earlybird.html'">
+    <div class="ph-img" style="background-image:url('images/earlybird-1.jpg');background-size:cover;background-position:center;"></div>
+    <div class="ov"></div>
+  </div>
+  <div class="grid-caption">
+    <div class="cap-meta">book · 2023</div>
+    <div class="cap-title">아침그림모음집 『EARLY BIRD』</div>
+  </div>
+</div>`,
+`<div class="grid-item-wrap">
+  <div class="grid-item" onclick="location.href='piece.html'">
+    <div class="ph-img" style="background-image:url('images/piece-1.jpg');background-size:cover;background-position:center;"></div>
+    <div class="ov"></div>
+  </div>
+  <div class="grid-caption">
+    <div class="cap-meta">original painting · 2023</div>
+    <div class="cap-title">Piece drawing</div>
+  </div>
+</div>`,
+`<div class="grid-item-wrap">
+  <div class="grid-item" onclick="location.href='calendar2024.html'">
+    <div class="ph-img" style="background-image:url('images/calendar2024-0.jpg');background-size:cover;background-position:center;"></div>
+    <div class="ov"></div>
+  </div>
+  <div class="grid-caption">
+    <div class="cap-meta">calendar · 2024</div>
+    <div class="cap-title">Small Veranda Calendar 2024</div>
+  </div>
+</div>`,
+`<div class="grid-item-wrap">
+  <div class="grid-item" onclick="location.href='pieceoriginal.html'">
+    <div class="ph-img" style="background-image:url('images/pieceoriginal-1.jpg');background-size:cover;background-position:center;"></div>
+    <div class="ov"></div>
+  </div>
+  <div class="grid-caption">
+    <div class="cap-meta">original painting · 2023</div>
+    <div class="cap-title">〈Piece by piece〉 원화</div>
+  </div>
+</div>`,
+`<div class="grid-item-wrap">
+  <div class="grid-item" onclick="location.href='pieceby.html'">
+    <div class="ph-img" style="background-image:url('images/pieceby-1.png');background-size:cover;background-position:center;"></div>
+    <div class="ov"></div>
+  </div>
+  <div class="grid-caption">
+    <div class="cap-meta">exhibition · 2023</div>
+    <div class="cap-title">Piece by piece : CALLING BOOKS</div>
+  </div>
+</div>`,
+`<div class="grid-item-wrap">
+  <div class="grid-item" onclick="location.href='publishers.html'">
+    <div class="ph-img" style="background-image:url('images/publishers-9.jpeg');background-size:cover;background-position:center;"></div>
+    <div class="ov"></div>
+  </div>
+  <div class="grid-caption">
+    <div class="cap-meta">book fair · 2023</div>
+    <div class="cap-title">Seoul Publishers Table</div>
+  </div>
+</div>`,
+`<div class="grid-item-wrap">
+  <div class="grid-item" onclick="location.href='via.html'">
+    <div class="ph-img" style="background-image:url('images/via-7.jpg');background-size:cover;background-position:center;"></div>
+    <div class="ov"></div>
+  </div>
+  <div class="grid-caption">
+    <div class="cap-meta">brand illustration · 2023</div>
+    <div class="cap-title">Viaplain × READYTOKICK × 박민주</div>
+  </div>
+</div>`,
+`<div class="grid-item-wrap">
+  <div class="grid-item" onclick="location.href='swimcap.html'" style="position:relative;">
+    <img src="images/swimcap-1.gif" style="width:100%;height:100%;object-fit:cover;display:block;">
+    <div class="ov"></div>
+  </div>
+  <div class="grid-caption">
+    <div class="cap-meta">brand illustration · 2023</div>
+    <div class="cap-title">READYTOKICK SWIM CAP illustration</div>
+  </div>
+</div>`,
+`<div class="grid-item-wrap">
+  <div class="grid-item" onclick="location.href='cartoon.html'">
+    <div class="ph-img" style="background-image:url('images/cartoon-1.jpg');background-size:cover;background-position:center;"></div>
+    <div class="ov"></div>
+  </div>
+  <div class="grid-caption">
+    <div class="cap-meta">cartoon illustration · 2023</div>
+    <div class="cap-title">READY TO KICK Cartoon Episode 2</div>
+  </div>
+</div>`,
+`<div class="grid-item-wrap">
+  <div class="grid-item" onclick="location.href='seoulforest.html'">
+    <div class="ph-img" style="background-image:url('images/seoulforest-1.jpg');background-size:cover;background-position:center;"></div>
+    <div class="ov"></div>
+  </div>
+  <div class="grid-caption">
+    <div class="cap-meta">drawing · 2023</div>
+    <div class="cap-title">Seoul Forest</div>
+  </div>
+</div>`,
+`<div class="grid-item-wrap">
+  <div class="grid-item" onclick="location.href='wardrobe.html'">
+    <div class="ph-img" style="background-image:url('images/oil-1.jpg');background-size:cover;background-position:center;"></div>
+    <div class="ov"></div>
+  </div>
+  <div class="grid-caption">
+    <div class="cap-meta">drawing · 2023</div>
+    <div class="cap-title">Wardrobe</div>
+  </div>
+</div>`,
+`<div class="grid-item-wrap">
+  <div class="grid-item" onclick="location.href='meetme.html'">
+    <div class="ph-img" style="background-image:url('images/meetme-1.jpg');background-size:cover;background-position:center;"></div>
+    <div class="ov"></div>
+  </div>
+  <div class="grid-caption">
+    <div class="cap-meta">drawing · 2023</div>
+    <div class="cap-title">밑미 리추얼 〈아침 15분 낙서하듯 그리기〉</div>
+  </div>
+</div>`,
+`<div class="grid-item-wrap">
+  <div class="grid-item" onclick="location.href='lifezip.html'">
+    <div class="ph-img" style="background-image:url('images/lifezip-1.jpg');background-size:cover;background-position:center;"></div>
+    <div class="ov"></div>
+  </div>
+  <div class="grid-caption">
+    <div class="cap-meta">magazine interview · 2023</div>
+    <div class="cap-title">라이프집 Do Not Disturb</div>
+  </div>
+</div>`,
+`<div class="grid-item-wrap">
+  <div class="grid-item" onclick="location.href='cjbook.html'">
+    <div class="ph-img" style="background-image:url('images/cjbook-1.jpg');background-size:cover;background-position:center;"></div>
+    <div class="ov"></div>
+  </div>
+  <div class="grid-caption">
+    <div class="cap-meta">book · 2023</div>
+    <div class="cap-title">『청주에 다녀왔습니다』</div>
+  </div>
+</div>`,
+`<div class="grid-item-wrap">
+  <div class="grid-item" onclick="location.href='nexfl.html'" style="position:relative;">
+    <img src="images/nexfl-3.gif" style="width:100%;height:100%;object-fit:cover;display:block;">
+    <div class="ov"></div>
+  </div>
+  <div class="grid-caption">
+    <div class="cap-meta">illustration · 2023</div>
+    <div class="cap-title">넷플연가</div>
+  </div>
+</div>`,
+`<div class="grid-item-wrap">
+  <div class="grid-item" onclick="location.href='carrot.html'">
+    <div class="ph-img" style="background-image:url('images/carrot-2.jpeg');background-size:cover;background-position:center;"></div>
+    <div class="ov"></div>
+  </div>
+  <div class="grid-caption">
+    <div class="cap-meta">calendar · 2023</div>
+    <div class="cap-title">I don't eat carrot calendar 2023</div>
+  </div>
+</div>`,
+`<div class="grid-item-wrap">
+  <div class="grid-item" onclick="location.href='gleer.html'">
+    <div class="ph-img" style="background-image:url('images/gleer-1.jpg');background-size:cover;background-position:center;"></div>
+    <div class="ov"></div>
+  </div>
+  <div class="grid-caption">
+    <div class="cap-meta">brand illustration · 2022</div>
+    <div class="cap-title">Gleer</div>
+  </div>
+</div>`,
+`<div class="grid-item-wrap">
+  <div class="grid-item" onclick="location.href='wechik.html'">
+    <div class="ph-img" style="background-image:url('images/wechik-1.jpg');background-size:cover;background-position:center;"></div>
+    <div class="ov"></div>
+  </div>
+  <div class="grid-caption">
+    <div class="cap-meta">brand illustration · 2022</div>
+    <div class="cap-title">WECHIK</div>
+  </div>
+</div>`,
+`<div class="grid-item-wrap">
+  <div class="grid-item" onclick="location.href='hb.html'">
+    <div class="ph-img" style="background-image:url('images/hb-1.jpg');background-size:cover;background-position:center;"></div>
+    <div class="ov"></div>
+  </div>
+  <div class="grid-caption">
+    <div class="cap-meta">brand illustration · 2022</div>
+    <div class="cap-title">효창복싱 / Hyochang Boxing</div>
+  </div>
+</div>`,
+`<div class="grid-item-wrap">
+  <div class="grid-item" onclick="location.href='cilocala.html'">
+    <div class="ph-img" style="background-image:url('images/cilocala-1.jpg');background-size:cover;background-position:center;"></div>
+    <div class="ov"></div>
+  </div>
+  <div class="grid-caption">
+    <div class="cap-meta">character illustration · 2022</div>
+    <div class="cap-title">CILOCALA</div>
+  </div>
+</div>`,
+`<div class="grid-item-wrap">
+  <div class="grid-item" onclick="location.href='estival.html'">
+    <div class="ph-img" style="background-image:url('images/estival-1.jpg');background-size:cover;background-position:center;"></div>
+    <div class="ov"></div>
+  </div>
+  <div class="grid-caption">
+    <div class="cap-meta">brand illustration · 2022</div>
+    <div class="cap-title">Estival Grocery Market</div>
+  </div>
+</div>`,
+`<div class="grid-item-wrap">
+  <div class="grid-item" onclick="location.href='kdi.html'">
+    <div class="ph-img" style="background-image:url('images/kdi-1.jpeg');background-size:cover;background-position:center;"></div>
+    <div class="ov"></div>
+  </div>
+  <div class="grid-caption">
+    <div class="cap-meta">magazine illustration · 2022</div>
+    <div class="cap-title">KDI 나라경제</div>
+  </div>
+</div>`,
+`<div class="grid-item-wrap">
+  <div class="grid-item" onclick="location.href='emoticon.html'">
+    <div class="ph-img" style="background-image:url('images/emoticon-9.gif');background-size:cover;background-position:center;"></div>
+    <div class="ov"></div>
+  </div>
+  <div class="grid-caption">
+    <div class="cap-meta">emoticon · 2021</div>
+    <div class="cap-title">카카오 이모티콘 "김호랭이 오늘의 운세"</div>
+  </div>
+</div>`,
+`<div class="grid-item-wrap">
+  <div class="grid-item" onclick="location.href='sikmul.html'">
+    <div class="ph-img" style="background-image:url('images/sikmul-1.jpg');background-size:cover;background-position:center;"></div>
+    <div class="ov"></div>
+  </div>
+  <div class="grid-caption">
+    <div class="cap-meta">book illustration · 2021</div>
+    <div class="cap-title">『식물 상담』 일러스트레이션</div>
+  </div>
+</div>`,
+`<div class="grid-item-wrap">
+  <div class="grid-item" onclick="location.href='cakebox.html'">
+    <div class="ph-img" style="background-image:url('images/cakebox-1.jpg');background-size:cover;background-position:center;"></div>
+    <div class="ov"></div>
+  </div>
+  <div class="grid-caption">
+    <div class="cap-meta">package illustration · 2021</div>
+    <div class="cap-title">Cake Box Illustration</div>
+  </div>
+</div>`,
+`<div class="grid-item-wrap">
+  <div class="grid-item" onclick="location.href='munbal.html'">
+    <div class="ph-img" style="background-image:url('images/munbal-1.png');background-size:cover;background-position:center;"></div>
+    <div class="ov"></div>
+  </div>
+  <div class="grid-caption">
+    <div class="cap-meta">book talk & drawing workshop · 2021</div>
+    <div class="cap-title">문발포레스트 〈최선의 하루를 위한 식물루틴〉</div>
+  </div>
+</div>`,
+`<div class="grid-item-wrap">
+  <div class="grid-item" onclick="location.href='sam.html'">
+    <div class="ph-img" style="background-image:url('images/sam-1.jpg');background-size:cover;background-position:center;"></div>
+    <div class="ov"></div>
+  </div>
+  <div class="grid-caption">
+    <div class="cap-meta">book · 2021</div>
+    <div class="cap-title">『집 나간 의욕을 찾습니다』</div>
+  </div>
+</div>`,
+`<div class="grid-item-wrap">
+  <div class="grid-item" onclick="location.href='directory.html'">
+    <div class="ph-img" style="background-image:url('images/directory-1.jpg');background-size:cover;background-position:center;"></div>
+    <div class="ov"></div>
+  </div>
+  <div class="grid-caption">
+    <div class="cap-meta">interview · 2021</div>
+    <div class="cap-title">디렉토리 매거진 인터뷰</div>
+  </div>
+</div>`,
+`<div class="grid-item-wrap">
+  <div class="grid-item" onclick="location.href='wellperion.html'">
+    <div class="ph-img" style="background-image:url('images/wellperion-1.jpg');background-size:cover;background-position:center;"></div>
+    <div class="ov"></div>
+  </div>
+  <div class="grid-caption">
+    <div class="cap-meta">magazine illustration · 2020</div>
+    <div class="cap-title">WELLPERION Magazine</div>
+  </div>
+</div>`,
+`<div class="grid-item-wrap">
+  <div class="grid-item" onclick="location.href='lala.html'">
+    <div class="ph-img" style="background-image:url('images/lala-1.jpg');background-size:cover;background-position:center;"></div>
+    <div class="ov"></div>
+  </div>
+  <div class="grid-caption">
+    <div class="cap-meta">catalogue · 2020</div>
+    <div class="cap-title">Flower and Plants Shop Catalogue</div>
+  </div>
+</div>`,
+`<div class="grid-item-wrap">
+  <div class="grid-item" onclick="location.href='camel.html'">
+    <div class="ph-img" style="background-image:url('images/camel-1.jpg');background-size:cover;background-position:center;"></div>
+    <div class="ov"></div>
+  </div>
+  <div class="grid-caption">
+    <div class="cap-meta">book · 2020</div>
+    <div class="cap-title">『내 방의 작은 식물은 언제나 나보다 큽니다』</div>
+  </div>
+</div>`,
+`<div class="grid-item-wrap">
+  <div class="grid-item" onclick="location.href='pendrawing.html'">
+    <div class="ph-img" style="background-image:url('images/20line-1.jpg');background-size:cover;background-position:center;"></div>
+    <div class="ov"></div>
+  </div>
+  <div class="grid-caption">
+    <div class="cap-meta">drawing · 2020</div>
+    <div class="cap-title">Pen Drawing</div>
+  </div>
+</div>`,
+`<div class="grid-item-wrap">
+  <div class="grid-item" onclick="location.href='ipad2020.html'">
+    <div class="ph-img" style="background-image:url('images/ipad-drawing-2020-1.png');background-size:cover;background-position:center;"></div>
+    <div class="ov"></div>
+  </div>
+  <div class="grid-caption">
+    <div class="cap-meta">drawing · 2020</div>
+    <div class="cap-title">iPad Drawings</div>
+  </div>
+</div>`,
+`<div class="grid-item-wrap">
+  <div class="grid-item" onclick="location.href='ipad.html'">
+    <div class="ph-img" style="background-image:url('images/ipad-drawing-1.jpg');background-size:cover;background-position:center;"></div>
+    <div class="ov"></div>
+  </div>
+  <div class="grid-caption">
+    <div class="cap-meta">drawing · 2019</div>
+    <div class="cap-title">iPad Drawings</div>
+  </div>
+</div>`];
+
+    function getPageSize() {
+      return window.innerWidth <= 600 ? 20 : 30;
+    }
+
+    let currentPage = 1;
+
+    function renderGrid() {
+      const pageSize = getPageSize();
+      const totalPages = Math.ceil(allItems.length / pageSize);
+      const start = (currentPage - 1) * pageSize;
+      const end = start + pageSize;
+      const pageItems = allItems.slice(start, end);
+
+      const grid = document.querySelector('.grid2');
+      grid.innerHTML = pageItems.join('\n');
+
+      renderPagination(totalPages);
+    }
+
+    function renderPagination(totalPages) {
+      const existing = document.querySelector('.pagination');
+      if (existing) existing.remove();
+
+      const nav = document.createElement('div');
+      nav.className = 'pagination';
+
+      // 이전 버튼
+      const prev = document.createElement('button');
+      prev.className = 'arrow';
+      prev.innerHTML = '&rsaquo;';
+      prev.style.transform = 'scaleX(-1)';
+      prev.disabled = currentPage === 1;
+      prev.style.opacity = currentPage === 1 ? '0.3' : '1';
+      prev.onclick = () => { if (currentPage > 1) { currentPage--; renderGrid(); window.scrollTo(0,0); } };
+      nav.appendChild(prev);
+
+      // 페이지 번호
+      for (let i = 1; i <= totalPages; i++) {
+        const btn = document.createElement('button');
+        btn.textContent = i;
+        if (i === currentPage) btn.classList.add('active');
+        btn.onclick = () => { currentPage = i; renderGrid(); window.scrollTo(0,0); };
+        nav.appendChild(btn);
+      }
+
+      // 다음 버튼
+      const next = document.createElement('button');
+      next.className = 'arrow';
+      next.innerHTML = '&rsaquo;';
+      next.disabled = currentPage === totalPages;
+      next.style.opacity = currentPage === totalPages ? '0.3' : '1';
+      next.onclick = () => { if (currentPage < totalPages) { currentPage++; renderGrid(); window.scrollTo(0,0); } };
+      nav.appendChild(next);
+
+      document.querySelector('.grid2').after(nav);
+    }
+
+    // 초기 렌더링
+    renderGrid();
+
+    // 화면 크기 바뀔 때
+    window.addEventListener('resize', () => {
+      currentPage = 1;
+      renderGrid();
+    });
   </script>
 
 </body>
