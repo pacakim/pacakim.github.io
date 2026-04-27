@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>한 장의 카프카 — paca kim</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'League Spartan', 'Helvetica Neue', Arial, sans-serif;
+      background: #ffffff;
+      color: #1a1a1a;
+    }
+    nav {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 1.6rem 2.8rem;
+      position: sticky; top: 0; background: #ffffff; z-index: 100;
+    }
+    .logo img { height: 28px; }
+    .nav-links { display: flex; gap: 2.2rem; list-style: none; }
+    .nav-links a {
+      font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase;
+      color: #888; text-decoration: none; transition: color 0.2s;
+    }
+    .nav-links a:hover { color: #1a1a1a; }
+    .page-wrap { max-width: 860px; margin: 0 auto; padding: 3rem 2.8rem 6rem; }
+    .back {
+      display: inline-block; font-size: 11px; letter-spacing: 0.1em;
+      text-transform: uppercase; color: #aaa; text-decoration: none;
+      margin-bottom: 2.5rem; transition: color 0.2s;
+    }
+    .back:hover { color: #1a1a1a; }
+    .work-cat { font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: #aaa; margin-bottom: 0.5rem; }
+    .work-title { font-size: 24px; font-weight: 500; line-height: 1.4; margin-bottom: 0.4rem; }
+    .work-year { font-size: 12px; color: #aaa; margin-bottom: 3rem; }
+    .img-main { width: 100%; height: auto; display: block; margin-bottom: 4px; }
+    .work-text {
+      display: flex; gap: 4rem;
+      padding-top: 2rem; margin-top: 3rem;
+      border-top: 1px solid #eee;
+    }
+    .work-text-ko { flex: 1; font-size: 14px; line-height: 1.95; color: #555; }
+    .work-text-en { flex: 1; font-size: 14px; line-height: 1.95; color: #888; }
+    .work-text-ko p + p { margin-top: 1em; }
+    .work-text-en p + p { margin-top: 1em; }
+    .credit { margin-top: 1rem; font-size: 12px; color: #aaa; line-height: 1.9; }
+    .credit a { color: #aaa; text-decoration: underline; text-underline-offset: 3px; transition: color 0.2s; }
+    .credit a:hover { color: #1a1a1a; }
+    .work-nav { margin-top: 3rem; padding-top: 0; border-top: none; }
+    .work-nav a {
+      font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase;
+      color: #aaa; text-decoration: none; transition: color 0.2s;
+    }
+    .work-nav a:hover { color: #1a1a1a; }
+    footer {
+      padding: 2rem 2.8rem;
+      display: flex; justify-content: space-between;
+    }
+    footer p { font-size: 11px; color: #bbb; }
+    @media (max-width: 600px) {
+      nav { padding: 1.2rem 1.5rem; }
+      .page-wrap { padding: 2rem 1.5rem 4rem; }
+      .work-text { flex-direction: column; gap: 2rem; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="logo"><a href="index.html"><img src="paca-logo.png" alt="paca kim"></a></div>
+  <ul class="nav-links">
+    <li><a href="index.html#archive-title">archive</a></li>
+    <li><a href="about.html">about</a></li>
+    <li><a href="contact.html">contact</a></li>
+  </ul>
+</nav>
+
+<div class="page-wrap">
+  <a class="back" href="index.html#archive-title">← archive</a>
+
+  <div class="work-cat">Poster Illustration</div>
+  <div class="work-title">한 장의 카프카</div>
+  <div class="work-year">2024</div>
+
+  <img class="img-main" src="images/kafka-1.JPG" alt="한 장의 카프카 1">
+  <img class="img-main" src="images/kafka-2.jpg" alt="한 장의 카프카 2">
+  <img class="img-main" src="images/kafka-3.jpg" alt="한 장의 카프카 3">
+  <img class="img-main" src="images/kafka-4.jpg" alt="한 장의 카프카 4">
+  <img class="img-main" src="images/kafka-5.jpg" alt="한 장의 카프카 5">
+  <img class="img-main" src="images/kafka-6.jpg" alt="한 장의 카프카 6">
+  <img class="img-main" src="images/kafka-7.jpg" alt="한 장의 카프카 7">
+  <img class="img-main" src="images/kafka-8.JPG" alt="한 장의 카프카 8">
+  <img class="img-main" src="images/kafka-9.JPG" alt="한 장의 카프카 9">
+  <img class="img-main" src="images/kafka-10.JPG" alt="한 장의 카프카 10">
+  <img class="img-main" src="images/kafka-11.JPG" alt="한 장의 카프카 11">
+  <img class="img-main" src="images/kafka-12.JPG" alt="한 장의 카프카 12">
+  <img class="img-main" src="images/kafka-13.JPG" alt="한 장의 카프카 13">
+  <img class="img-main" src="images/kafka-14.JPG" alt="한 장의 카프카 14">
+  <img class="img-main" src="images/kafka-15.JPG" alt="한 장의 카프카 15">
+  <img class="img-main" src="images/kafka-16.JPG" alt="한 장의 카프카 16">
+  <img class="img-main" src="images/kafka-17.JPG" alt="한 장의 카프카 17">
+  <img class="img-main" src="images/kafka-18.JPG" alt="한 장의 카프카 18">
+  <img class="img-main" src="images/kafka-19.JPG" alt="한 장의 카프카 19">
+  <img class="img-main" src="images/kafka-20.JPG" alt="한 장의 카프카 20">
+  <img class="img-main" src="images/kafka-21.JPG" alt="한 장의 카프카 21">
+  <img class="img-main" src="images/kafka-22.JPG" alt="한 장의 카프카 22">
+
+  <div class="work-text">
+    <div class="work-text-ko">
+      <p>카프카를 모르는 사람은 없지만 진짜 읽은 사람은 없다. 2024년 카프카 서거 100주기를 맞아 &lt;한 장의 카프카&gt; 포스터로 만들었습니다. 기획자 하정님의 한 장 시리즈 중 첫 번째 작업이었고요.</p>
+      <p>원래는 물감을 잔뜩 써서 포스터를 만들어볼 생각이었습니다만, 카프카에 대해 알면 알수록 뭔가 어울리지 않는다는 걸 알게 되었습니다. 그래서 오로지 검정색 펜 하나로만 써서 그렸습니다.</p>
+    </div>
+    <div class="work-text-en"></div>
+  </div>
+
+  <div class="credit">
+    좋은여름, 하정 <a href="https://www.instagram.com/goodsummer77/" target="_blank">@goodsummer77</a>
+  </div>
+
+  <div class="work-nav">
+    <a href="index.html#archive-title">← all works</a>
+  </div>
+</div>
+
+<footer>
+  <p>© 2026 paca kim</p>
+  <p>seoul, korea</p>
+</footer>
+
+</body>
+</html>
