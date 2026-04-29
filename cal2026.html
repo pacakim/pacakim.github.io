@@ -28,9 +28,30 @@
     .work-text-en p + p { margin-top: 1em; }
     .work-text-ko blockquote { font-size: 13px; color: #888; line-height: 1.9; padding-left: 1rem; border-left: 1.5px solid #ddd; margin-bottom: 1em; }
     .work-text-en blockquote { font-size: 13px; color: #aaa; line-height: 1.9; padding-left: 1rem; border-left: 1.5px solid #ddd; margin-bottom: 1em; }
-    .work-nav { margin-top: 3rem; padding-top: 0; border-top: none; }
-    .work-nav a { font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: #aaa; text-decoration: none; transition: color 0.2s; }
-    .work-nav a:hover { color: #1a1a1a; }
+.work-nav {
+  margin-top: 3rem;
+  padding-top: 0;
+  border-top: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.work-nav a {
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #aaa;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.work-nav a:hover { color: #1a1a1a; }
+.work-nav-ghost {
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  visibility: hidden;
+}
+ 
     footer { padding: 2rem 2.8rem; display: flex; justify-content: space-between; }
     footer p { font-size: 11px; color: #bbb; }
     @media (max-width: 600px) {
@@ -76,7 +97,11 @@
         <p>The front of each page brings together illustrations made with gouache, colored pencil, marker, and pencil — all on the theme of breakfast. The 24 solar terms and public holidays (including substitute holidays) are marked throughout. On the back, the front artwork is enlarged, alongside a collection of sentences about cooking and food that I've gathered over time.</p>
       </div>
     </div>
-    <div class="work-nav"><a href="index.html#archive">← all works</a></div>
+<div class="work-nav">
+  <a href="rice.html" class="nav-prev">← Prev</a>
+  <a href="index.html#archive-title">All</a>
+  <a href="tabf.html" class="nav-next">Next →</a>
+</div>
   </div>
   <footer>
     <p>© 2026 paca kim</p>
