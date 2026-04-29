@@ -71,16 +71,29 @@
       flex: 1; font-size: 14px;
       line-height: 1.95; color: #888;
     }
-    .work-nav {
-      margin-top: 3rem;
-      padding-top: 0;
-      border-top: none;
-    }
-    .work-nav a {
-      font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase;
-      color: #aaa; text-decoration: none; transition: color 0.2s;
-    }
-    .work-nav a:hover { color: #1a1a1a; }
+.work-nav {
+  margin-top: 3rem;
+  padding-top: 0;
+  border-top: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.work-nav a {
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #aaa;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.work-nav a:hover { color: #1a1a1a; }
+.work-nav-ghost {
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  visibility: hidden;
+}
     footer {
       padding: 2rem 2.8rem;
       
@@ -135,10 +148,11 @@
       </div>
     </div>
 
-    <div class="work-nav">
-      <a href="index.html#archive">← all works</a>
-    </div>
-
+<div class="work-nav">
+  <a href="ipad2020.html" class="nav-prev">← Prev</a>
+  <a href="index.html#archive-title">All</a>
+  <span class="work-nav-ghost">Next →</span>
+</div>
   </div>
 
   <footer>
