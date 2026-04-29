@@ -71,21 +71,29 @@
       flex: 1; font-size: 14px;
       line-height: 1.95; color: #888;
     }
-    .work-nav {
-      margin-top: 3rem;
-      padding-top: 0;
-      border-top: none;
-    }
-    .work-nav a {
-      font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase;
-      color: #aaa; text-decoration: none; transition: color 0.2s;
-    }
-    .work-nav a:hover { color: #1a1a1a; }
-    footer {
-      padding: 2rem 2.8rem;
-      
-      display: flex; justify-content: space-between;
-    }
+.work-nav {
+  margin-top: 3rem;
+  padding-top: 0;
+  border-top: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.work-nav a {
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #aaa;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.work-nav a:hover { color: #1a1a1a; }
+.work-nav-ghost {
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  visibility: hidden;
+}
     footer p { font-size: 11px; color: #bbb; }
     @media (max-width: 600px) {
       nav { padding: 1.2rem 1.5rem; }
@@ -129,10 +137,11 @@
         This is a work created as an homage to a scene from writer Park Sun-young's book <em>Europe Hotel Traveling</em>. Before starting, I thought carefully about how to visually capture the unique atmosphere of European hotels and the sensibility the author brought to the page. I paid particular attention to color, wanting to preserve both the coziness of the spaces and the romance found in those fleeting travel moments.
       </div>
     </div>
-
-    <div class="work-nav">
-      <a href="index.html#archive">← all works</a>
-    </div>
+<div class="work-nav">
+  <a href="kafka.html" class="nav-prev">← Prev</a>
+  <a href="index.html#archive-title">All</a>
+  <a href="poet.html" class="nav-next">Next →</a>
+</div>
 
   </div>
 
