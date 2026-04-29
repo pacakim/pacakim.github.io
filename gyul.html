@@ -123,21 +123,29 @@
 
     /* 하단 네비 */
     .work-nav {
-      display: flex;
-      justify-content: space-between;
-      margin-top: 3rem;
-      padding-top: 2rem;
-      
-    }
-    .work-nav a {
-      font-size: 11px;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: #aaa;
-      text-decoration: none;
-      transition: color 0.2s;
-    }
-    .work-nav a:hover { color: #1a1a1a; }
+  margin-top: 3rem;
+  padding-top: 0;
+  border-top: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.work-nav a {
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #aaa;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.work-nav a:hover { color: #1a1a1a; }
+.work-nav-ghost {
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  visibility: hidden;
+}
+ 
 
     footer {
       padding: 2rem 2.8rem;
@@ -199,10 +207,11 @@
   Photo : 김민수 @minsuour
 </div>
     <!-- 하단 네비 -->
-    <div class="work-nav">
-      <a href="index.html#archive">← all works</a>
-      <!-- 다음 작업 생기면: <a href="다음작업.html">next →</a> -->
-    </div>
+<div class="work-nav">
+  <a href="cal2025.html" class="nav-prev">← Prev</a>
+  <a href="index.html#archive-title">All</a>
+  <a href="sunfather.html" class="nav-next">Next →</a>
+</div>
 
   </div>
 
