@@ -25,9 +25,29 @@
     .work-text-ko { flex: 1; font-size: 14px; line-height: 1.95; color: #555; }
     .work-text-en { flex: 1; font-size: 14px; line-height: 1.95; color: #888; }
     .credit { margin-top: 1rem; font-size: 12px; color: #aaa; line-height: 1.9; }
-    .work-nav { margin-top: 3rem; padding-top: 0; border-top: none; }
-    .work-nav a { font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: #aaa; text-decoration: none; transition: color 0.2s; }
-    .work-nav a:hover { color: #1a1a1a; }
+.work-nav {
+  margin-top: 3rem;
+  padding-top: 0;
+  border-top: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.work-nav a {
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #aaa;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.work-nav a:hover { color: #1a1a1a; }
+.work-nav-ghost {
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  visibility: hidden;
+}
     footer { padding: 2rem 2.8rem; display: flex; justify-content: space-between; }
     footer p { font-size: 11px; color: #bbb; }
     @media (max-width: 600px) {
@@ -76,7 +96,12 @@
       Client : Parnas<br>
       Contents : Hertz
     </div>
-    <div class="work-nav"><a href="index.html#archive-title">← all works</a></div>
+div class="work-nav">
+  <a href="cjgunsan.html" class="nav-prev">← Prev</a>
+  <a href="index.html#archive-title">All</a>
+  <a href="mellow.html" class="nav-next">Next →</a>
+</div>
+ 
   </div>
   <footer>
     <p>© 2026 paca kim</p>
