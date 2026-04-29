@@ -82,21 +82,29 @@
       transition: color 0.2s;
     }
     .credit a:hover { color: #1a1a1a; }
-    .work-nav {
-      margin-top: 3rem;
-      padding-top: 0;
-      border-top: none;
-    }
-    .work-nav a {
-      font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase;
-      color: #aaa; text-decoration: none; transition: color 0.2s;
-    }
-    .work-nav a:hover { color: #1a1a1a; }
-    footer {
-      padding: 2rem 2.8rem;
-     
-      display: flex; justify-content: space-between;
-    }
+ .work-nav {
+  margin-top: 3rem;
+  padding-top: 0;
+  border-top: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.work-nav a {
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #aaa;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.work-nav a:hover { color: #1a1a1a; }
+.work-nav-ghost {
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  visibility: hidden;
+}
     footer p { font-size: 11px; color: #bbb; }
     @media (max-width: 600px) {
       nav { padding: 1.2rem 1.5rem; }
@@ -148,9 +156,11 @@
       Brand : <a href="https://www.readytokick.com" target="_blank">READYTOKICK →</a>
     </div>
 
-    <div class="work-nav">
-      <a href="index.html#archive">← all works</a>
-    </div>
+<div class="work-nav">
+  <a href="swimcap.html" class="nav-prev">← Prev</a>
+  <a href="index.html#archive-title">All</a>
+  <a href="seoulforest.html" class="nav-next">Next →</a>
+</div>
 
   </div>
 
