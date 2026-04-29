@@ -24,9 +24,29 @@
     .work-text { display: flex; gap: 4rem; padding-top: 2rem; margin-top: 3rem; }
     .work-text-ko { flex: 1; font-size: 14px; line-height: 1.95; color: #555; }
     .work-text-en { flex: 1; font-size: 14px; line-height: 1.95; color: #888; }
-    .work-nav { margin-top: 3rem; padding-top: 0; border-top: none; }
-    .work-nav a { font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: #aaa; text-decoration: none; transition: color 0.2s; }
-    .work-nav a:hover { color: #1a1a1a; }
+ .work-nav {
+  margin-top: 3rem;
+  padding-top: 0;
+  border-top: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.work-nav a {
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #aaa;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.work-nav a:hover { color: #1a1a1a; }
+.work-nav-ghost {
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  visibility: hidden;
+}
     footer { padding: 2rem 2.8rem; display: flex; justify-content: space-between; }
     footer p { font-size: 11px; color: #bbb; }
     @media (max-width: 600px) {
@@ -62,7 +82,11 @@
       <div class="work-text-ko">베란다에 식물로 가득 찬 빌라를 상상하며 달력의 레이아웃을 구성했습니다. 1월부터 한 장씩 뜯어 쓸 수 있도록 칼선을 넣었고, 직접 프린트한 뒤 칼선도 일일이 수작업으로 넣어 소량 제작한 달력입니다.</div>
       <div class="work-text-en">I designed the calendar layout while imagining a villa with a balcony overflowing with plants. Each month can be torn off one by one along a perforated line — printed by hand, perforated by hand, made in small quantities.</div>
     </div>
-    <div class="work-nav"><a href="index.html#archive">← all works</a></div>
+  <div class="work-nav">
+  <a href="liferecipe.html" class="nav-prev">← Prev</a>
+  <a href="index.html#archive-title">All</a>
+  <a href="parnas.html" class="nav-next">Next →</a>
+</div>
   </div>
   <footer>
     <p>© 2026 paca kim</p>
