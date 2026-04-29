@@ -80,16 +80,29 @@
       transition: color 0.2s;
     }
     .credit a:hover { color: #1a1a1a; }
-    .work-nav {
-      display: flex; justify-content: space-between;
-      margin-top: 2rem; padding-top: 2rem;
-      
-    }
-    .work-nav a {
-      font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase;
-      color: #aaa; text-decoration: none; transition: color 0.2s;
-    }
-    .work-nav a:hover { color: #1a1a1a; }
+   .work-nav {
+  margin-top: 3rem;
+  padding-top: 0;
+  border-top: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.work-nav a {
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #aaa;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.work-nav a:hover { color: #1a1a1a; }
+.work-nav-ghost {
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  visibility: hidden;
+}
     footer {
       padding: 2rem 2.8rem;
       
