@@ -26,20 +26,28 @@
     .work-text-en { flex: 1; font-size: 14px; line-height: 1.95; color: #888; }
 .work-nav {
   margin-top: 3rem;
+  padding-top: 0;
+  border-top: none;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.work-nav a { font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: #aaa; text-decoration: none; transition: color 0.2s; }
+.work-nav a {
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #aaa;
+  text-decoration: none;
+  transition: color 0.2s;
+}
 .work-nav a:hover { color: #1a1a1a; }
-.work-nav-ghost { font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; visibility: hidden; }
-    footer { padding: 2rem 2.8rem; display: flex; justify-content: space-between; }
-    footer p { font-size: 11px; color: #bbb; }
-    @media (max-width: 600px) {
-      nav { padding: 1.2rem 1.5rem; }
-      .page-wrap { padding: 2rem 1.5rem 4rem; }
-      .work-text { flex-direction: column; gap: 2rem; }
-    }
+.work-nav-ghost {
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  visibility: hidden;
+}
+ 
   </style>
 </head>
 <body>
@@ -69,21 +77,15 @@
       <div class="work-text-ko">봄 여름 가을 동안 수집한 초록 식물들과 아침 햇살을 머금은 드로잉으로 만든 조그만 탁상달력입니다. 열두 달의 어울리는 초록의 아침 드로잉을 담았고, 앞뒤로 사용 가능합니다.</div>
       <div class="work-text-en">A small desk calendar made from drawings of green plants collected through spring, summer, and autumn, bathed in morning light. Each of the twelve months is paired with a morning green drawing, and the calendar can be used on both sides.</div>
     </div>
-  <div class="work-nav"></div>
-
-<script>
-const pages = ["lokal.html", "koala.html", ... ]; // 위에 드린 배열
-const current = location.pathname.split("/").pop();
-const i = pages.indexOf(current);
-const nav = document.querySelector(".work-nav");
-const prev = i > 0 ? `<a href="${pages[i-1]}">← Prev</a>` : `<span class="work-nav-ghost">← Prev</span>`;
-const next = i < pages.length-1 ? `<a href="${pages[i+1]}">Next →</a>` : `<span class="work-nav-ghost">Next →</span>`;
-nav.innerHTML = `${prev}<a href="index.html#archive-title">All</a>${next}`;
-</script>
-  </div>
+ <div class="work-nav">
+  <a href="cjjeju.html" class="nav-prev">← Prev</a>
+  <a href="index.html#archive-title">All</a>
+  <a href="gyul.html" class="nav-next">Next →</a>
+</div>
   <footer>
     <p>© 2026 paca kim</p>
     <p>seoul, korea</p>
   </footer>
+  
 </body>
 </html>
