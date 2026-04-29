@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sweet Dreams — paca kim</title>
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'League Spartan', 'Helvetica Neue', Arial, sans-serif;
+      background: #ffffff;
+      color: #1a1a1a;
+    }
+    nav {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 1.6rem 2.8rem;
+      position: sticky; top: 0; background: #ffffff; z-index: 100;
+    }
+    .logo img { height: 28px; }
+    .nav-links { display: flex; gap: 2.2rem; list-style: none; }
+    .nav-links a {
+      font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase;
+      color: #888; text-decoration: none; transition: color 0.2s;
+    }
+    .nav-links a:hover { color: #1a1a1a; }
+    .page-wrap { max-width: 860px; margin: 0 auto; padding: 3rem 2.8rem 6rem; }
+    .back {
+      display: inline-block; font-size: 11px; letter-spacing: 0.1em;
+      text-transform: uppercase; color: #aaa; text-decoration: none;
+      margin-bottom: 2.5rem; transition: color 0.2s;
+    }
+    .back:hover { color: #1a1a1a; }
+    .work-cat { font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: #aaa; margin-bottom: 0.5rem; }
+    .work-title { font-size: 24px; font-weight: 500; line-height: 1.4; margin-bottom: 0.4rem; }
+    .work-year { font-size: 12px; color: #aaa; margin-bottom: 3rem; }
+    .img-main { width: 100%; height: auto; display: block; margin-bottom: 4px; }
+    .img-grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 4px; margin-bottom: 4px; }
+    .img-grid-2 img { width: 100%; height: auto; display: block; }
+    .video-wrap {
+      position: relative; width: 100%; padding-bottom: 56.25%;
+      margin-bottom: 4px; background: #f5f5f5;
+    }
+    .video-wrap iframe {
+      position: absolute; top: 0; left: 0;
+      width: 100%; height: 100%;
+      border: none;
+    }
+    .work-text {
+      display: flex; gap: 4rem;
+      padding-top: 2rem; margin-top: 3rem;
+    }
+    .work-text-ko { flex: 1; font-size: 14px; line-height: 1.95; color: #555; }
+    .work-text-en { flex: 1; font-size: 14px; line-height: 1.95; color: #888; }
+    .work-text-ko p + p { margin-top: 1em; }
+    .work-text-en p + p { margin-top: 1em; }
+    .credit { margin-top: 1rem; font-size: 12px; color: #aaa; line-height: 1.9; }
+    .credit a { color: #aaa; text-decoration: underline; text-underline-offset: 3px; transition: color 0.2s; }
+    .credit a:hover { color: #1a1a1a; }
+    .work-nav { margin-top: 3rem; }
+    .work-nav a {
+      font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase;
+      color: #aaa; text-decoration: none; transition: color 0.2s;
+    }
+    .work-nav a:hover { color: #1a1a1a; }
+    footer {
+      padding: 2rem 2.8rem;
+      display: flex; justify-content: space-between;
+    }
+    footer p { font-size: 11px; color: #bbb; }
+    @media (max-width: 600px) {
+      nav { padding: 1.2rem 1.5rem; }
+      .page-wrap { padding: 2rem 1.5rem 4rem; }
+      .img-grid-2 { grid-template-columns: 1fr; }
+      .work-text { flex-direction: column; gap: 2rem; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="logo"><img src="paca-logo.png" alt="paca kim"></div>
+  <ul class="nav-links">
+    <li><a href="index.html#archive-title">archive</a></li>
+    <li><a href="about.html">about</a></li>
+    <li><a href="contact.html">contact</a></li>
+  </ul>
+</nav>
+
+<div class="page-wrap">
+  <a class="back" href="index.html#archive-title">← archive</a>
+
+  <div class="work-cat">Book illustration</div>
+  <div class="work-title">『Sweet Dreams』</div>
+  <div class="work-year">2023</div>
+
+  <img class="img-main" src="images/sweetdreams-1.jpg" alt="Sweet Dreams 1">
+  <img class="img-main" src="images/sweetdreams-2.jpg" alt="Sweet Dreams 2">
+  <img class="img-main" src="images/sweetdreams-3.jpg" alt="Sweet Dreams 3">
+  <img class="img-main" src="images/sweetdreams-4.jpg" alt="Sweet Dreams 4">
+  <img class="img-main" src="images/sweetdreams-5.jpg" alt="Sweet Dreams 5">
+  <img class="img-main" src="images/sweetdreams-6.jpg" alt="Sweet Dreams 6">
+  <img class="img-main" src="images/sweetdreams-7.jpg" alt="Sweet Dreams 7">
+  <img class="img-main" src="images/sweetdreams-8.jpg" alt="Sweet Dreams 8">
+  <img class="img-main" src="images/sweetdreams-9.jpg" alt="Sweet Dreams 9">
+  <img class="img-main" src="images/sweetdreams-10.jpg" alt="Sweet Dreams 10">
+  <img class="img-main" src="images/sweetdreams-11.jpg" alt="Sweet Dreams 11">
+  <img class="img-main" src="images/sweetdreams-12.jpg" alt="Sweet Dreams 12">
+  <img class="img-main" src="images/sweetdreams-13.jpg" alt="Sweet Dreams 13">
+  <img class="img-main" src="images/sweetdreams-14.jpg" alt="Sweet Dreams 14">
+  <img class="img-main" src="images/sweetdreams-15.jpg" alt="Sweet Dreams 15">
+  <img class="img-main" src="images/sweetdreams-16.jpg" alt="Sweet Dreams 16">
+  <img class="img-main" src="images/sweetdreams-17.jpg" alt="Sweet Dreams 17">
+  <img class="img-main" src="images/sweetdreams-18.jpg" alt="Sweet Dreams 18">
+  <img class="img-main" src="images/sweetdreams-19.jpg" alt="Sweet Dreams 19">
+  <img class="img-main" src="images/sweetdreams-20.jpg" alt="Sweet Dreams 20">
+  <img class="img-main" src="images/sweetdreams-21.jpg" alt="Sweet Dreams 21">
+  <img class="img-main" src="images/sweetdreams-22.jpg" alt="Sweet Dreams 22">
+  <img class="img-main" src="images/sweetdreams-23.jpg" alt="Sweet Dreams 23">
+
+  <div class="video-wrap">
+    <iframe src="https://www.youtube.com/embed/_bq4pg8BbX8?si=fDPfouvYJmWEQ5xF" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  </div>
+
+  <div class="work-text">
+    <div class="work-text-ko">
+      <p>불면증을 물리치는 달콤한 추억, 문장, 음악과 수필집 『Sweet Dreams』 의 삽화를 작업했습니다. 이 책의 작가 림고는 "내가 먼저 좋아하는 작가에게 먼저 같이 재밌는거 해보자고 제안해보고 싶다"는 생각이 들었을 때 가장 먼저 떠오른 사람이었습니다. 여행에서 모은 설탕 껍질에서 영감을 받아, 달콤한 밤에 읽기 좋은 책을 만들어보고 싶다고 했고, 저는 그것과 어울리는 그림들을 그렸습니다. 케이팝 작사가이기도 한 림고는 잠 못이루는 밤마다 들을 수 있는 왈츠풍 자장가를 만들어 수록곡으로 담아냈습니다.</p>
+    </div>
+    <div class="work-text-en">
+      <p>I illustrated <em>Sweet Dreams</em>, a collection of essays, sentences, and music for overcoming insomnia with sweet memories. When author Rimgo thought "I want to reach out first to a writer I love and propose doing something fun together," I was the first person who came to mind. Inspired by sugar wrappers collected during travels, she wanted to create a book perfect for sweet nights, and I drew illustrations to match. Rimgo, who is also a K-pop lyricist, composed a waltz-style lullaby to listen to on sleepless nights, which is included as a track in the book.</p>
+    </div>
+  </div>
+
+  <div class="credit">
+    글 림고<br>
+    그림 김파카<br>
+    디자인 성민제
+  </div>
+
+  <div class="work-nav">
+    <a href="index.html#archive-title">← all works</a>
+  </div>
+</div>
+
+<footer>
+  <p>© 2026 paca kim</p>
+  <p>seoul, korea</p>
+</footer>
+
+</body>
+</html>
