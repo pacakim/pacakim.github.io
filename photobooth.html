@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>One Grove Drawing Photo Booth — paca kim</title>
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'League Spartan', 'Helvetica Neue', Arial, sans-serif;
+      background: #ffffff;
+      color: #1a1a1a;
+    }
+    nav {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 1.6rem 2.8rem;
+      position: sticky; top: 0; background: #ffffff; z-index: 100;
+    }
+    .logo img { height: 28px; }
+    .nav-links { display: flex; gap: 2.2rem; list-style: none; }
+    .nav-links a {
+      font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase;
+      color: #888; text-decoration: none; transition: color 0.2s;
+    }
+    .nav-links a:hover { color: #1a1a1a; }
+    .page-wrap { max-width: 860px; margin: 0 auto; padding: 3rem 2.8rem 6rem; }
+    .back {
+      display: inline-block; font-size: 11px; letter-spacing: 0.1em;
+      text-transform: uppercase; color: #aaa; text-decoration: none;
+      margin-bottom: 2.5rem; transition: color 0.2s;
+    }
+    .back:hover { color: #1a1a1a; }
+    .work-cat { font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: #aaa; margin-bottom: 0.5rem; }
+    .work-title { font-size: 24px; font-weight: 500; line-height: 1.4; margin-bottom: 0.4rem; }
+    .work-year { font-size: 12px; color: #aaa; margin-bottom: 3rem; }
+    .img-main { width: 100%; height: auto; display: block; margin-bottom: 4px; }
+    .img-grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 4px; margin-bottom: 4px; }
+    .img-grid-2 img { width: 100%; height: auto; display: block; }
+    .work-text {
+      display: flex; gap: 4rem;
+      padding-top: 2rem; margin-top: 3rem;
+    }
+    .work-text-ko { flex: 1; font-size: 14px; line-height: 1.95; color: #555; }
+    .work-text-en { flex: 1; font-size: 14px; line-height: 1.95; color: #888; }
+    .work-text-ko p + p { margin-top: 1em; }
+    .work-text-en p + p { margin-top: 1em; }
+    .credit { margin-top: 1rem; font-size: 12px; color: #aaa; line-height: 1.9; }
+    .credit a { color: #aaa; text-decoration: underline; text-underline-offset: 3px; transition: color 0.2s; }
+    .credit a:hover { color: #1a1a1a; }
+    .work-nav { margin-top: 3rem; padding-top: 0; border-top: none; }
+    .work-nav a {
+      font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase;
+      color: #aaa; text-decoration: none; transition: color 0.2s;
+    }
+    .work-nav a:hover { color: #1a1a1a; }
+    footer {
+      padding: 2rem 2.8rem;
+      display: flex; justify-content: space-between;
+    }
+    footer p { font-size: 11px; color: #bbb; }
+    @media (max-width: 600px) {
+      nav { padding: 1.2rem 1.5rem; }
+      .page-wrap { padding: 2rem 1.5rem 4rem; }
+      .img-grid-2 { grid-template-columns: 1fr; }
+      .work-text { flex-direction: column; gap: 2rem; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="logo"><a href="index.html"><img src="paca-logo.png" alt="paca kim"></a></div>
+  <ul class="nav-links">
+    <li><a href="index.html#archive-title">archive</a></li>
+    <li><a href="about.html">about</a></li>
+    <li><a href="contact.html">contact</a></li>
+  </ul>
+</nav>
+
+<div class="page-wrap">
+  <a class="back" href="index.html#archive-title">← archive</a>
+
+  <div class="work-cat">Popup drawing booth · One Grove</div>
+  <div class="work-title">One Grove Drawing Photo Booth</div>
+  <div class="work-year">2025</div>
+
+  <img class="img-main" src="images/photobooth-1.jpg" alt="One Grove Drawing Photo Booth 1">
+  <img class="img-main" src="images/photobooth-2.jpg" alt="One Grove Drawing Photo Booth 2">
+  <img class="img-main" src="images/photobooth-3.jpg" alt="One Grove Drawing Photo Booth 3">
+  <img class="img-main" src="images/photobooth-4.jpg" alt="One Grove Drawing Photo Booth 4">
+  <img class="img-main" src="images/photobooth-5.jpg" alt="One Grove Drawing Photo Booth 5">
+  <img class="img-main" src="images/photobooth-6.jpg" alt="One Grove Drawing Photo Booth 6">
+  <img class="img-main" src="images/photobooth-7.jpg" alt="One Grove Drawing Photo Booth 7">
+  <img class="img-main" src="images/photobooth-8.jpg" alt="One Grove Drawing Photo Booth 8">
+  <img class="img-main" src="images/photobooth-9.jpg" alt="One Grove Drawing Photo Booth 9">
+  <img class="img-main" src="images/photobooth-10.jpg" alt="One Grove Drawing Photo Booth 10">
+  <img class="img-main" src="images/photobooth-11.jpg" alt="One Grove Drawing Photo Booth 11">
+  <img class="img-main" src="images/photobooth-12.jpg" alt="One Grove Drawing Photo Booth 12">
+  <img class="img-main" src="images/photobooth-13.jpg" alt="One Grove Drawing Photo Booth 13">
+  <img class="img-main" src="images/photobooth-14.jpg" alt="One Grove Drawing Photo Booth 14">
+
+  <div class="work-text">
+    <div class="work-text-ko">
+      <p>원그로브 오프닝 이벤트로 진행한 라이브 드로잉 포토부스입니다. 제가 포토부스 안에서 원그로브에 놀러온 사람들을 사진찍고 그걸 드로잉하여 그렸습니다. 코인도 직접 페인팅하고 만들어서 사용했고요. 날씨가 좋던 날에는 정원에서, 덥고 비오던 날에는 실내에서 많은 사람들을 만나고 그렸습니다. 아마도 하루에 가장 많은 사람들을 그린 날들이 아닐까 싶습니다.</p>
+    </div>
+    <div class="work-text-en">
+      <p>This was a live drawing photo booth held as part of the One Grove opening event. Inside the booth, I photographed visitors and drew their portraits on the spot. I also hand-painted and crafted the coins used for the booth. On sunny days we set up in the garden; on hot or rainy days, indoors — meeting and drawing many people either way. These were probably the days I drew the most people in a single day.</p>
+    </div>
+  </div>
+
+  <div class="credit">
+    Client : One Grove<br>
+    PM : Hertz<br>
+    Photo by Miho
+  </div>
+
+  <div class="work-nav">
+    <a href="index.html#archive-title">← all works</a>
+  </div>
+</div>
+
+<footer>
+  <p>© 2026 paca kim</p>
+  <p>seoul, korea</p>
+</footer>
+
+</body>
+</html>
