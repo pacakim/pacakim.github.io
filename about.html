@@ -24,10 +24,12 @@
     .about-links a:hover { color: #1a1a1a; }
     footer { padding: 2rem 2.8rem; display: flex; justify-content: center; gap: 2rem; }
     footer p { font-size: 13px; color: #888; }
-    @media (max-width: 600px) { gap: 1.0rem; } {
-      nav { padding: 1.2rem 1.5rem; }
-      .page-wrap { padding: 1.2rem 1.5rem 4rem; }
-    }
+ @media (max-width: 600px) {
+  ...
+  .nav-links { gap: 0.6rem; }
+  .nav-links a { font-size: 10px; letter-spacing: 0.06em; }
+  .logo img { height: 26px; }
+}
   </style>
 </head>
 <body>
