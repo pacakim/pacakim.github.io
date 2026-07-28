@@ -195,19 +195,19 @@
   .proj-wrap { padding: 0 1.5rem 1.5rem; }
   .proj-row {
     flex-direction: column;
-    align-items: center;
-    text-align: center;
+    align-items: flex-start;
+    text-align: left;
     row-gap: 0.6rem;
   }
   .proj-row-left {
     flex-direction: column;
-    align-items: center;
-    text-align: center;
+    align-items: flex-start;
+    text-align: left;
     gap: 0.4rem;
   }
   .proj-row-right {
     width: 100%;
-    justify-content: center;
+    justify-content: flex-start;
     gap: 0.6rem;
   }
   .proj-detail-inner { flex-direction: column-reverse; }
@@ -239,7 +239,7 @@
 
   <!-- PROJECT LIST -->
   <div class="proj-wrap">
-    <ul class="proj-list" style="list-style:none;">
+    <ul class="proj-list" style="list-style:none; margin:0; padding:0;">
 
       <!-- 항목 추가 방법:
            1. 아래 <li class="proj-item"> 블록 전체를 복사해서 붙여넣기
