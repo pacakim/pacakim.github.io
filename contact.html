@@ -29,10 +29,12 @@
     .contact-item a { color: #1a1a1a; text-decoration: none; }
     footer { padding: 2rem 2.8rem; display: flex; justify-content: center; gap: 2rem; }
     footer p { font-size: 13px; color: #888; margin-bottom: 0; }
-    @media (max-width: 600px) {
-      nav { padding: 1.2rem 1.5rem; }
-      .page-wrap { padding: 1.2rem 1.5rem 4rem; }
-    }
+@media (max-width: 600px) {
+  ...
+  .nav-links { gap: 0.6rem; }
+  .nav-links a { font-size: 10px; letter-spacing: 0.06em; }
+  .logo img { height: 26px; }
+}
   </style>
 </head>
 <body>
